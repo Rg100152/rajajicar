@@ -1,0 +1,4881 @@
+Bahut badhiya! Aapne car rental (Cab/Car Booking) website ke design references diye hain. In sabhi images ko dekh kar ek clear picture ban gayi hai ki aapko ek **Premium Car Rental Website** chahiye jiska naam **"RajajiCar"** hai. 
+
+Aapki requirement ke hisaab se main yahan **RajajiCar** ka ek professional aur detailed **SDD (Software Design Document)** bana raha hoon. 
+
+---
+
+# 📄 Software Design Document (SDD)
+**Project Name:** RajajiCar - Premium Car Rental Platform
+**Document Version:** 1.0
+**Prepared For:** RajajiCar Web Development
+
+---
+
+## 1. Introduction & Objective (परिचय और उद्देश्य)
+**RajajiCar** ek online car rental (cab booking) platform hai. Iska main objective customers ko premium, luxury aur budget-friendly cars ko aasani se rent par book karne ki suvidha dena hai. Website ka design modern, user-friendly aur conversion-focused (booking badhane wala) hoga.
+
+## 2. Scope (दायरा)
+Is project mein ek **Customer-facing Website** aur ek **Admin Dashboard** shamil hoga.
+* **Customer Website:** Users car dekh sakte hain, search kar sakte hain, aur booking request bhej sakte hain.
+* **Admin Dashboard:** Admin cars add/remove kar sakta hai, bookings dekh sakta hai aur manage kar sakta hai.
+
+---
+
+## 3. Target Audience & User Roles (उपयोगकर्ता)
+1. **Customer (User):** Jo car rent par lena chahta hai. (Bina login ke bhi book kar sake, ya optional login).
+2. **Admin:** Jo website ko manage karega (cars, prices, bookings).
+3. **Driver (Optional/Future Scope):** Agar aap driver ke saath car dete hain.
+
+---
+
+## 4. System Architecture (तकनीकी संरचना)
+Aapki di gayi images ke hisaab se ek fast aur responsive website banegi.
+* **Frontend:** HTML5, CSS3, JavaScript (ya React.js / Next.js for better performance). 
+* **UI Framework:** Tailwind CSS ya Bootstrap (Responsive design ke liye).
+* **Backend:** Node.js (Express) ya PHP (Laravel).
+* **Database:** MySQL ya MongoDB (Bookings aur Car details save karne ke liye).
+
+---
+
+## 5. Key Features (मुख्य विशेषताएं)
+
+### A. Customer Website Features (Frontend)
+1. **Hero Section (Home Page):** 
+   * Background image slider (luxury cars).
+   * Main Headline: *"Rent Premium Cars Easy & Fast"*
+   * **Quick Search Form:** Pick-up Location, Drop-off Location, Pick-up Date/Time, Return Date/Time, Car Type (SUV, Sedan, Luxury).
+2. **Car Listing Page:**
+   * Category filter (Economy, SUV, Luxury, Van).
+   * Car cards showing: Image, Name (e.g., Lincoln MKZ, BMW M3, Honda City), Price/Day, Specs (600 hp, 0-100 mph).
+   * "Book Now" ya "Learn More" button.
+3. **Car Details Page:**
+   * Full specifications, multiple images, terms & conditions, and booking form.
+4. **Special Offers / Popular Cars:**
+   * Home page par "Our Most Popular Cars" section (jaise reference images mein hai).
+5. **Contact & Support:**
+   * Form to send a request ("Send A Request").
+   * Call button (Direct dialing) aur WhatsApp integration.
+6. **Static Pages:** About Us, Our Services, Terms & Conditions, Privacy Policy.
+
+### B. Admin Dashboard Features (Backend)
+1. **Secure Login:** Admin username/password.
+2. **Car Management:** Add new cars, upload images, set price per day, update availability.
+3. **Booking Management:** View all customer requests, update booking status (Pending/Approved/Rejected).
+4. **Enquiries:** Dekhna ki kisne contact form bhara hai.
+
+---
+
+## 6. Database Schema (डेटाबेस डिज़ाइन - हिंट)
+* **`Cars` Table:** ID, Name, Brand, Image_URL, Price_Per_Day, Category, Transmission, Seats, Status.
+* **`Bookings` Table:** ID, Customer_Name, Phone, Email, Car_ID, Pickup_Location, Dropoff_Location, Pickup_Date, Return_Date, Status.
+* **`Contacts` Table:** ID, Name, Email, Message.
+* **`Admin` Table:** ID, Username, Password.
+
+---
+
+## 7. UI/UX Design Guidelines (डिज़ाइन गाइडलाइन)
+Aapki di gayi images (Dark theme, Orange theme, Yellow theme) ko dhyan mein rakhte hue:
+* **Color Palette:** 
+  * **Primary:** Premium Orange (#FF6B00) ya Golden Yellow (#FFC107) (Cars aur Buttons ke liye).
+  * **Secondary:** Dark Charcoal / Black (#1A1A1A) (Background aur Text ke liye) + White (#FFFFFF).
+* **Typography:** Bold Headings (Sans-serif like Montserrat/Poppins), clean body text.
+* **Layout:** Split layout (Left side text/form, Right side big Car image). 
+* **Sticky Header:** Top navigation bar with Logo, Home, Listings, About, Contact, aur "Book Now" button.
+* **Mobile Responsive:** Mobile par menu hamburger ban jaye aur booking form vertical ho jaye.
+
+---
+
+## 8. Third-Party Integrations (अन्य सेवाएं)
+1. **Payment Gateway:** Razorpay ya Stripe (Advance booking ke liye - *Optional*).
+2. **SMS/WhatsApp API:** Booking confirm hone par customer ko SMS/WhatsApp bhejna (Twilio ya WATI).
+3. **Map Integration:** Google Maps (Pickup location select karne ke liye).
+4. **Google reCAPTCHA:** Spam se bachne ke liye.
+
+---
+
+## 9. Future Scope (भविष्य की योजना)
+* User Login & Dashboard (Booking history dekhne ke liye).
+* Driver ke saath car option add karna.
+* Real-time GPS tracking.
+* Online payment gateway integration.
+
+---
+
+### 🚀 Next Steps (Agla Kadam)
+Agar aap is SDD se satisfied hain, toh bataiye:
+1. Kya main iska **Database SQL Code** likh doon?
+2. Kya aapko **Frontend HTML/CSS ka basic code** chahiye (jo in images jaisa dikhe)?
+3. Kya aapka koi developer hai jo ise banayega, ya aap khud bana rahe hain?
+
+Aap batao, hum aage badhein! 😊Aapki di gayi images aur car rental website ke hisaab se, **RajajiCar** ke liye aap in **sabhi popular car brands** ko apni website par list kar sakte hain. 
+
+Maine inhe categories mein divide kiya hai taaki aapki website ka "Car Filter" section achha lage:
+
+### 1. Luxury & Premium Brands (लक्ज़री कारें)
+Aapki images mein BMW, Range Rover aur Lincoln jaisi gaadiyan hain. Inhe premium section mein rakhein:
+*   **BMW** (e.g., M3, X5, 5 Series)
+*   **Mercedes-Benz** (e.g., C-Class, E-Class, GLE)
+*   **Audi** (e.g., A4, A6, Q7)
+*   **Range Rover / Land Rover** (e.g., Evoque, Velar, Defender)
+*   **Jaguar** (e.g., XF, F-Pace)
+*   **Lincoln** (e.g., MKZ - *jo aapki pehli image mein hai*)
+*   **Volvo** (e.g., XC60, S90)
+*   **Lexus** (e.g., ES, RX)
+*   **Porsche** (e.g., Macan, 911)
+*   **Tesla** (e.g., Model 3, Model Y - *EV section ke liye*)
+
+### 2. Popular & Family Brands (आम और फैमिली कारें)
+India aur global market mein sabse zyada rent par lene wali cars:
+*   **Toyota** (e.g., Innova Crysta, Fortuner, Camry, Corolla)
+*   **Honda** (e.g., City, Civic, Amaze, CR-V)
+*   **Hyundai** (e.g., Creta, Verna, i20, Tucson)
+*   **Mahindra** (e.g., Scorpio-N, XUV700, Thar)
+*   **Tata** (e.g., Safari, Harrier, Nexon)
+*   **Maruti Suzuki** (e.g., Swift, Dzire, Ertiga, Brezza)
+*   **Kia** (e.g., Seltos, Carens, Carnival)
+*   **Volkswagen** (e.g., Virtus, Taigun, Tiguan)
+*   **Skoda** (e.g., Slavia, Kushaq)
+*   **MG** (e.g., Hector, Astor)
+*   **Ford** (e.g., Endeavour, Mustang - *aapki image mein Ford Skyline likha hai, par asal mein wo Ford Mustang jaisi dikh rahi hai*)
+*   **Nissan** (e.g., Magnite, Sunny)
+*   **Renault** (e.g., Kwid, Triber)
+*   **Chevrolet** (e.g., Beat, Tavera - *purani popular cars*)
+
+### 3. Commercial & Group Travel (बड़ी गाड़ियां)
+Agar aap tempo travellers ya vans bhi rent par dete hain:
+*   **Force Motors** (Urbania, Traveller)
+*   **Mercedes-Benz** (V-Class - *Luxury Van*)
+
+---
+
+### 💡 Website Design Tip (Aapki images ke hisaab se):
+*   **Home Page:** Sirf top 6-8 brands ke logo dikhayein (jaise BMW, Toyota, Honda, Mercedes, Hyundai, Range Rover).
+*   **Car Listings Page:** Ek **"Filter by Brand"** dropdown ya checkbox banayein jisme ye saare brands hon, taaki customer apni pasand ka brand easily chun sake.
+*   **Car Cards:** Jaisa aapki teesri image mein hai, wahan gaadi ka naam likhne ke saath uski **Brand** bhi mention karein (jaise: *Honda Civic*, *BMW M3*).
+
+Agar aapko in brands ke **logo images** chahiye ya inka **HTML/CSS code (cards)** chahiye website ke liye, toh batayein!Aapki **RajajiCar** website ke liye (jo ki ek premium car rental service hai) text animation bahut important role play karega. Aapki di gayi images dark theme, bold fonts aur luxury cars par based hain. 
+
+Yahan kuch **best aur modern text animation ideas** hain jo aapki website ko professional aur attractive banayenge:
+
+### 1. Hero Section (Main Banner) Animations
+Yeh section sabse pehle dikhta hai, isliye yahan animation ekdum "WOW" hona chahiye.
+
+*   **Typing Effect (Typewriter):** 
+    *   **Kaise dikhega:** *"Rent Premium Cars | Rent Luxury Cars | Rent Affordable Cars"* (Yeh text ek-ek karke type hoga aur phir mit kar naya text aayega).
+    *   **Kahan use karein:** Main heading ke theek upar ya niche.
+*   **Fade Up & Slide (Staggered):**
+    *   **Kaise dikhega:** Jab page load ho, toh pehle *"FAST & AFFORDABLE"* upar se aaye, phir thodi der baad *"Rent Premium Cars"* aaye, aur phir *"Book Now"* button aaye. (Ek ke baad ek cheez aaye).
+*   **Text Highlight (Color Splash):**
+    *   **Kaise dikhega:** Jaise likha ho *"Rent **Premium** Cars"*. Yahan "Premium" word par ek orange color ka brush effect ya background highlight aaye jo animate ho.
+
+### 2. Scrolling Animations (Jab user scroll kare)
+*   **Parallax Text (Speed Effect):** 
+    *   **Kaise dikhega:** Background mein car ki image ho aur text thodi alag speed se move kare (Jaise background slow chale aur text fast). Isse 3D depth ka effect aata hai.
+*   **Reveal on Scroll (Mask Effect):**
+    *   **Kaise dikhega:** Jab user niche scroll karega, toh "Our Most Popular Cars" jaisa heading ek curtain (mask) hatne ki tarah left se right reveal ho.
+*   **Count-Up Animation (Numbers):**
+    *   **Kaise dikhega:** Agar aapke paas stats hain (jaise: *500+ Cars, 10k+ Happy Customers, 50+ Cities*), toh number 0 se start hokar 500 tak count up hoga (badhega).
+
+### 3. Hover Animations (Jab mouse upar jaye)
+*   **Magnetic Buttons:** 
+    *   **Kaise dikhega:** Jab user "Book Now" ya "Search Car" button par mouse le jayega, toh button ka text ya button khud thoda sa mouse ki taraf attract hoga.
+*   **Underline Expand:**
+    *   **Kaise dikhega:** Top menu (Home, About, Services) mein jab user hover karega, toh text ke niche ek orange color ki line left se right draw hogi.
+*   **Text Fill (Outline to Solid):**
+    *   **Kaise dikhega:** Car ke naam par (jaise *Lincoln MKZ*) hover karne par text pehle sirf outline (khali) dikhega, aur phir solid color se fill ho jayega.
+
+### 4. Special Effects (Premium Look ke liye)
+*   **Split Text Animation (GSAP style):**
+    *   **Kaise dikhega:** Heading ke har ek letter (A, B, C) alag-alag rotate hokar ya bounce karke apni jagah par aayenge. (Yeh luxury brands use karte hain).
+*   **Gradient Text Flow:**
+    *   **Kaise dikhega:** Aapke text mein ek rainbow ya orange-to-yellow gradient hoga jo constantly flow karta rahega (jaise paani ki lehar).
+*   **Glitch Effect:**
+    *   **Kaise dikhega:** "FAST & AFFORDABLE" heading par kabhi-kabhi ek second ke liye glitch (computer error jaisa effect) aaye. (Yeh thoda aggressive aur sporty look deta hai).
+
+---
+
+### 🛠️ Technical Implementation (Kaise banayein?)
+
+Agar aap developer hain ya developer se banwa rahe hain, toh in libraries ka use karein:
+1.  **HTML/CSS:** Simple hover aur typing effects ke liye (CSS keyframes).
+2.  **GSAP (GreenSock):** Sabse best hai scroll animations, split text aur premium effects ke liye. (Bahut smooth chalta hai).
+3.  **AOS (Animate On Scroll):** Simple fade-up aur slide-in effects ke liye (Bahut aasan hai).
+4.  **Typed.js:** Typewriter effect ke liye.
+
+**Mera Suggestion:** Aapki website dark aur premium hai, isliye **"Text Reveal on Scroll"** aur **"Typing Effect"** sabse achhe lagenge. Zyada animations (jaise glitch) mat use karein, warna website slow aur cheap lag sakti hai. Keep it smooth and classy! 🚗✨
+
+
+
+Bahut badhiya! Ek premium car rental website ke liye **Logo** aur **Images** sabse zyada matter karte hain. Aapki di gayi reference images dark, orange aur yellow theme par based hain. 
+
+Yahan **RajajiCar** ke liye Logo ideas aur Stock Images ki puri list hai:
+
+---
+
+## 🎨 1. Logo Ideas (RajajiCar)
+
+Aapke logo mein "Car" aur "Raja" (Royal/Premium) ka feel hona chahiye. Yahan 4 best concepts hain:
+
+### **Idea 1: The Royal Crown & Car (Premium Look)**
+*   **Concept:** Ek stylish car ki front grill ya steering wheel, aur uske upar ek chhota sa Crown (Taj).
+*   **Colors:** Golden Yellow + Dark Charcoal (Black).
+*   **Font:** Bold, Serif font (jaise *Playfair Display* ya *Cinzel*) jisme royal feel aaye.
+*   **Text:** **RAJAJI** (bada) + **CAR** (chhota, orange color mein).
+
+### **Idea 2: Speed & Key (Modern Look)**
+*   **Concept:** Ek car key jisme se speed lines (aage badhne ki lines) nikal rahi hon. Ya ek abstract car shape jo aage ki taraf speed bana rahi ho.
+*   **Colors:** Vibrant Orange (#FF6B00) + White.
+*   **Font:** Modern Sans-serif (jaise *Montserrat* ya *Poppins*).
+*   **Text:** **RajajiCar** (CamelCase).
+
+### **Idea 3: Monogram "R" (Minimalist)**
+*   **Concept:** Ek stylish "R" letter jo aage se car ke tyre ya road jaisa dikhe. Isme negative space ka use karein.
+*   **Colors:** Silver/Grey + Black (Premium feel ke liye).
+*   **Text:** **RAJAJICAR** (Sab capital, bold).
+*   **Usage:** Yeh logo website ke top-left corner par aur car cards par watermark ki tarah bahut achha lagega.
+
+### **Idea 4: Crown R + Road (Iconic)**
+*   **Concept:** "R" ke upar ek chhota Crown, aur "R" ke niche ek curvy road.
+*   **Colors:** Black background par Golden/Orange gradient.
+
+> 💡 **Logo Tip:** Aap free logo maker (Canva, Looka, ya BrandCrowd) par jaakar "Royal Car Rental" search karke apne hisaab se customize kar sakte hain. Logo **transparent background (PNG)** mein save karein.
+
+---
+
+## 📸 2. Stock Images Ideas (Kahan se laayein)
+
+Aapki website par high-quality images bahut zaroori hain. Car rental website ke liye in images ki zaroorat padegi:
+
+### **A. Hero Section (Main Banner)**
+*   **Kya chahiye:** Ek luxury car (SUV ya Sedan) jo side se ya 3/4th angle se dikh rahi ho. Background dark ya transparent ho taaki car pop out kare.
+*   **Search Keywords:** `Luxury car dark background`, `Premium SUV isolated`, `Car rental hero image`.
+
+### **B. Car Categories (Sedan, SUV, Luxury, Hatchback)**
+*   **Kya chahiye:** Har category ke liye 3-4 alag-alag cars ki photos (jaisa aapki image 3 mein hai).
+*   **Search Keywords:** `White sedan car`, `Black luxury SUV`, `Orange SUV`, `Economy car`.
+
+### **C. Background Images (Textures/Patterns)**
+*   **Kya chahiye:** Dark road, city lights, ya abstract dark pattern jo booking form ke peeche lage.
+*   **Search Keywords:** `Dark asphalt road`, `Night city road`, `Abstract car background`.
+
+### **D. Icons & Illustrations**
+*   **Kya chahiye:** Location pin, Calendar, Time, User, Fuel type, Transmission (Gear) icons.
+*   **Source:** **Flaticon** ya **FontAwesome** (Free icons).
+
+---
+
+### 🌐 Best Free Stock Image Websites (Copyright Free)
+Aap in websites se free images download kar sakte hain:
+
+1.  **Unsplash.com** (Best for premium and high-res car photos)
+2.  **Pexels.com** (Good for car and road backgrounds)
+3.  **Pixabay.com** (Variety of car images)
+4.  **Freepik.com** (For vector car illustrations and UI elements - Free with attribution)
+
+---
+
+### 🔍 Exact Search Queries for Stock Images:
+In keywords ko in websites par search karein:
+*   `Luxury car rental banner`
+*   `BMW dark background`
+*   `Range Rover isolated`
+*   `Car key handover` (Customer service image ke liye)
+*   `Happy customer driving car` (Testimonial section ke liye)
+*   `Car dashboard interior` (Features dikhane ke liye)
+
+---
+
+### 🚀 Pro Tip (Image Optimization):
+Website par images bahut heavy na hon. Download karne ke baad unhe **TinyPNG.com** ya **Squoosh.app** par compress zaroor karein, taaki website fast load ho.
+
+Kya aap chahte hain ki main aapko **Logo ka SVG code** likh kar doon? Ya phir **Hero Section ka HTML/CSS code** jisme aap images laga sakein? Bataiye! 😊
+
+Aapki **RajajiCar** website ke liye pehle humne text animation dekhi thi, ab main aapko **Website Animation (UI/UX Animations)** ke aur ideas deta hoon. Car rental website mein animation ka maqsad sirf dikhawa nahi, balki user ko booking form tak aasani se le jaana hona chahiye.
+
+Aapki reference images (dark theme, orange/yellow buttons, car showcase) ke hisaab se yeh **Top Animation Ideas** hain:
+
+---
+
+### 1. Car Image Animations (गाड़ियों के इफेक्ट्स)
+*   **360-Degree Car Rotation (On Hover/Scroll):** 
+    *   **Kaise:** Jab user car card (jaise Lincoln MKZ ya BMW) par mouse le jaye, toh gaadi ka pura 3D model ya sequence images 360-degree ghoomein. (Agar 3D mushkil ho, toh hover par car thodi si aage badhe aur headlight blink kare).
+*   **Floating Car Effect:**
+    *   **Kaise:** Hero section (main banner) mein jo badi gaadi hai, wo hamesha halki-halki upar-neeche float kare (jaise hawa mein ho). Isse premium feel aata hai.
+*   **Parallax Wheels / Road:**
+    *   **Kaise:** Agar banner mein road ya background hai, toh scroll karne par background slow move kare aur car fast, jisse speed ka ehsaas ho.
+
+### 2. Booking Form Animations (सबसे ज़रूरी)
+*   **Smart Form Expansion:**
+    *   **Kaise:** Jab user "Book Now" par click kare, toh ek chhota sa button ek smooth animation ke saath ek poora **Booking Form (Pickup, Dropoff, Date)** ban jaye (Framer Motion style).
+*   **Input Field Focus Glow:**
+    *   **Kaise:** Jab user kisi box (jaise "Pick-up Location") par click kare, toh us box ke border mein ek Orange color ki glowing line left se right animate ho.
+*   **Calendar Slide-in:**
+    *   **Kaise:** Date select karne ke liye jab calendar khule, toh wo niche se smooth slide hokar aaye, achanak se pop-up na ho.
+
+### 3. Scroll & Reveal Animations (जब यूज़र स्क्रॉल करे)
+*   **Staggered Car Cards (One by One):**
+    *   **Kaise:** "Our Most Popular Cars" section mein jab user scroll kare, toh cars ek saath na aayein. Pehle car 1 aaye (fade up), 0.2 second baad car 2, phir car 3. (Yeh bahut smooth lagta hai).
+*   **Horizontal Scroll for Categories:**
+    *   **Kaise:** Car categories (SUV, Sedan, Luxury) ko left-right swipe karne wala (carousel) banayein, jisme mouse drag karne par smooth slide ho.
+*   **Sticky Header Hide/Show:**
+    *   **Kaise:** Jab user niche scroll kare, toh navbar upar hide ho jaye, aur jaise hi wo thoda upar scroll kare, navbar wapas niche slide hokar aa jaye.
+
+### 4. Button & CTA Animations (क्लिक बढ़ाने के लिए)
+*   **Ripple Effect:**
+    *   **Kaise:** Jab user Orange "Search Car" ya "Rent a Car" button par click kare, toh click wali jagah se paani ki lehar (ripple) jaisa effect nikle.
+*   **Pulse Effect (Attention Grabber):**
+    *   **Kaise:** "Book Now" button hamesha halka sa pulse kare (bada-chhota ho) taaki user ki nazar wahan jaye.
+*   **Arrow Slide on Hover:**
+    *   **Kaise:** Button ke andar agar arrow (→) hai, toh hover par arrow thoda aage slide ho aur button ka color thoda dark ho jaye.
+
+### 5. Page Loader (जब साइट खुले)
+*   **Speedometer Loader:**
+    *   **Kaise:** Jab tak website load ho rahi hai, ek chhota sa speedometer (meter) 0 se 100 tak jaye aur phir website khul jaye. (Car theme ke liye perfect).
+
+### 6. Micro-Interactions (छोटे-छोटे इफेक्ट्स)
+*   **Success Checkmark:** Booking complete hone par ek green tick (✔) draw hota hua dikhe (SVG animation).
+*   **Phone Ring:** Agar koi phone number diya hai (jaise aapki image mein 800-5-800), toh uske icon par hover karne se phone halka sa ring (hilne) ka effect de.
+*   **Map Pin Drop:** Location select karte waqt Google Map par pin upar se drop (gire) aur bounce kare.
+
+---
+
+### 💻 Technical Implementation (कैसे बनवाएं?)
+Agar aap developer se banwa rahe hain, toh unhe yeh libraries batayein:
+1.  **Framer Motion (React):** Sabse best animations ke liye (agar React use kar rahe hain).
+2.  **GSAP + ScrollTrigger:** Scroll ke saath car aur text animations ke liye.
+3.  **LottieFiles:** Loader aur chhote icons (jaise success tick) ke liye. (Yeh JSON format mein hota hai aur bahut light hota hai).
+4.  **Swiper.js:** Car slider/carousel ke liye.
+
+**Meri Salah:** Aapki website premium hai, isliye **"Smooth"** animations par focus karein. Zyada bounces aur flashy effects website ko sasta (cheap) dikha sakte hain. **Floating Car**, **Staggered Cards** aur **Button Hover** ka combination sabse professional lagega! 🚗✨
+Aapne jo GIFs aur images share ki hain, unmein se kuch link open nahi ho rahe hain (error 404/406 aa raha hai) ya unpar ad-blocker ka issue hai. Isliye main unka exact content dekh nahi paaya. Lekin aapke diye gaye URL names aur description se main samajh gaya hoon ki aap **RajajiCar** ke Hero Section ke liye kya chahte hain: **Neon lights, premium car animations, aur moving brand logos.**
+
+Yahan main aapko batata hoon ki in images ko website par kaise use karein aur kuch technical tips deta hoon:
+
+---
+
+### 1. Hero Section (Main Banner) ke liye GIFs & Images
+
+Aapne jo pehli 4 images di hain (Giphy ka car GIF, Behance ka GIF, aur Neon light wali car image), yeh Hero section ke liye **perfect** hain.
+
+*   **Neon Light Car Image:** (Jo aapne 4th link mein di hai) - Yeh image **Background** ke liye best hai. Isko aap `background-size: cover` aur `background-position: center` karke rakhein. Iske upar aap apna Text aur Booking Form rakhein.
+*   **Car Animation GIFs:** (Pehli 2 GIFs) - Agar aap chahte hain ki hero section mein gaadi chal rahi ho, toh in GIFs ko **Car Image** ki jagah use karein.
+    *   *Salah:* Hero section mein ek saath bahut saari GIFs mat lagayein, warna website slow ho jayegi aur user ka dhyaan bhatak jayega. Ek main car ka GIF ya image rakhein.
+
+### 2. Brand Logos (BMW, Mercedes, Lamborghini, etc.)
+
+Aapne jo brand logos ke GIFs diye hain (BMW, Mercedes, Lamborghini, Porsche, Toyota, Ferrari, Audi, Tata), yeh **"Brands We Offer"** ya **"Our Partners"** section ke liye bahut achhe hain.
+
+*   **Inko kahan lagayein:** Hero section ke theek niche ek patti (strip) banayein jisme yeh saare brand logos ek line mein ghoomte (sliding/marquee) rahein. Isse website bahut premium lagti hai.
+*   **Problem:** Aapne jo links diye hain, unmein se kuch Pinterest, Behance aur Tenor ke hain. In websites ke hotlink (direct link) kabhi-kabhi kaam nahi karte ya block ho jaate hain.
+*   **Solution:** Un logos ko download karein (GIF format mein) aur apne computer/phone mein save karein. Phir unhe apni website ke folder mein rakhein aur wahan se use karein. (Direct link lagane se kai baar images dikhna band ho jati hain).
+
+### 3. Technical Tips (Important)
+
+*   **GIF Size:** GIFs ki file size bahut badi hoti hai. Agar aap 4-5 bade GIFs ek saath laga denge, toh website load hone mein 10-15 second lag sakte hain. 
+    *   *Tip:* Sirf 1-2 main GIFs rakhein. Baaki ke liye **WebP format** ya **MP4 video** ka use karein jo bahut light hote hain.
+*   **Fallback:** Jo links open nahi ho rahe hain, unki jagah aap free stock websites (jaise Unsplash ya Pexels) se similar images le sakte hain.
+
+---
+
+### 🚀 Agla Kadam
+
+Agar aap chahte hain ki main aapko **Hero Section ka HTML/CSS Code** likh kar doon jisme:
+1. Background mein Neon Car Image ho.
+2. Upar aapka text "FAST & AFFORDABLE" ho.
+3. Niche ek Booking Form ho.
+4. Aur uske niche Brand Logos ki sliding strip ho.
+
+Toh batayein! Main aapko poora code likh kar de sakta hoon. Aap bas apni images ke local path (jaise `images/car-bg.jpg`) code mein daal dijiye. 😊
+Bilkul! Aapne jo **GIFs aur Images** ke links diye hain, wo RajajiCar website ko ek **High-End, Cinematic aur Premium** look denge. Hero section mein moving GIFs aur logo GIFs ka use website ko bahut modern bana dega.
+
+Aapki di gayi saari cheezon ko integrate karte hue, main yahan **RajajiCar** ka ek updated aur detailed **SDD (Software Design Document)** bana raha hoon. Isme focus kiya gaya hai ki aapki GIFs aur Images kahan, kaise aur kis animation ke saath dikhengi.
+
+---
+
+# 📄 Software Design Document (SDD) - Version 2.0
+**Project Name:** RajajiCar - Premium Car Rental Platform
+**Design Theme:** Dark Theme, Neon Accents, Cinematic Animation, Luxury Feel.
+
+---
+
+## 1. Introduction & Objective
+**RajajiCar** ek premium car rental service hai. Iska maqsad customers ko luxury aur budget cars online book karne ki suvidha dena hai. Website ka look **Dark, Glowy (Neon), aur High-Tech** hoga, jismein moving cars aur glowing logos ka use hoga.
+
+---
+
+## 2. Visual Assets & Media Integration (Aapke Links ka Use)
+
+Aapke diye gaye links ko SDD mein is tarah se place kiya jayega:
+
+### A. Hero Section (Main Banner) - The Cinematic View
+*   **Background Image (Static + Parallax):** 
+    *   Image: `close-up-car-with-neon-lights-black-background` (Aapka 4th link)
+    *   **Effect:** Yeh background image hogi. Jab user mouse move karega, toh image halki si move karegi (Parallax effect) jisse 3D depth aayegi.
+*   **Main Subject (GIF):**
+    *   GIF: `giphy.gif` (Aapka 1st link - Car driving/rotating) ya `behance.gif` (Aapka 2nd link - Car render).
+    *   **Effect:** Yeh GIF center mein ya right side mein float karega. Iske peeche ek **Neon Orange glow** hoga jisse car pop-out lagegi. 
+*   **Text Animation:** "FAST & AFFORDABLE" text upar se fade-in hoga aur "Rent a Car" button pulse karega.
+
+### B. Brands Section (Moving Logos) - Trust Builder
+Hero section ke theek niche ek strip hogi jismein aapke diye gaye **Logo GIFs** continuously scroll honge (Infinite Marquee Effect).
+*   **Logos Included:**
+    *   BMW (`bmw-car.gif`)
+    *   Mercedes (`mercedes-toyota-logo.gif`)
+    *   Lamborghini (`99132.gif`)
+    *   Porsche (`bcfc739f99ba48be8a8caf805a365c6e.gif`)
+    *   Toyota (`mercedes-toyota-logo.gif` - Toyota part)
+    *   Audi (`5dbb5baad4fa74a9e81359e2f683ca06.gif`)
+    *   Tata Motors (`xC0UtgLtjgj7ekiWQ3/200w.gif`)
+    *   *Ferrari (Aapka Pinterest link ek image page hai, wahan se logo image extract karke use karenge).*
+*   **Animation:** Logos left se right smooth speed se move karenge (jaise Netflix ya Amazon karte hain). Hover karne par specific logo ruk jayega aur glow karega.
+
+### C. Our Fleet (Car Listings)
+*   **Design:** Dark Cards with Orange borders.
+*   **Images:** Har car card par ek static high-quality image hogi, lekin **Hover** karne par woh GIF ban jayegi (ya halki si zoom hogi) jisse user ko lage ki gaadi start ho rahi hai.
+
+---
+
+## 3. Page Structure & Layout (Website Ka Map)
+
+1.  **Header / Navbar:** 
+    *   Logo (Left), Links (Center), "Book Now" Button (Right - Orange Glow).
+    *   Sticky header: Scroll karne par background dark-blur (glassmorphism) ho jayega.
+2.  **Hero Section:** (Jaisa upar describe kiya gaya hai - Neon Car + GIF).
+3.  **Brand Marquee:** (Logo GIFs scrolling strip).
+4.  **Quick Search / Booking Form:**
+    *   Pick-up Location, Drop-off Location, Dates, Car Type.
+    *   Background: Dark glass effect (Frosted glass).
+5.  **Popular Cars (Grid):**
+    *   3-4 Cars (e.g., BMW M3, Range Rover, Toyota Fortuner).
+    *   Cards with price, specs, and "Book Now" button.
+6.  **Services / Why Choose Us:**
+    *   4 Icons (Rapid Transfer, Luxury Cars, Airport Pickup, 24/7 Support).
+7.  **Footer:** 
+    *   Links, Social Media, Contact Info, Newsletter Signup.
+
+---
+
+## 4. Animation & Interaction Plan (User Experience)
+
+Aapki di gayi images/GIFs ko dhyan mein rakhte hue:
+*   **Neon Glow Effects:** Jab user kisi button ya logo par hover karega, toh uske aas-paas Orange/Red neon glow aayega (matching the neon car image).
+*   **GIF Loop Optimization:** Hero section ka GIF bahut heavy ho sakta hai. Isliye hum JavaScript use karenge taaki GIF tabhi load ho jab page load ho jaye, taaki website fast chale.
+*   **Smooth Scroll:** Website par smooth scroll (Lenis.js) lagega, taaki user ko scroll karte waqt luxury feel aaye.
+*   **Hover on Car Cards:** Jab customer kisi car card par mouse le jayega, toh gaadi ki image halki si upar uthegi (lift up) aur ek "Book Now" button uske niche se slide hokar aayega.
+
+---
+
+## 5. Technical Stack (Kaise Banega)
+
+*   **Frontend:** React.js ya Next.js (Kyunki heavy GIFs aur smooth animations ke liye React best hai).
+*   **Styling:** Tailwind CSS (Dark theme aur neon glow effects ke liye) + Framer Motion (Animations ke liye).
+*   **Backend:** Node.js + Express.
+*   **Database:** MongoDB (Car details, Bookings ke liye).
+*   **Image/Video Hosting:** Cloudinary ya AWS S3 (GIFs ko fast load karne ke liye).
+
+---
+
+## 6. Performance & SEO (Zaroori Baat)
+
+*   **GIF Warning:** GIFs ki file size bahut badi hoti hai. Agar 5-6 heavy GIFs ek saath load honge, toh website slow ho jayegi aur user bhaag jayega.
+*   **Solution:** 
+    1.  Hero section ki car ko GIF ki jagah **WebM video** (transparent background wali) banayein, wo 10x fast load hoti hai.
+    2.  Brand logos ko **SVG (Static)** rakhein aur hover par animate karein.
+    3.  Images ko WebP format mein convert karein.
+
+---
+
+## 7. Future Scope
+*   User Login & Dashboard.
+*   Online Payment Gateway (Razorpay).
+*   Driver ke saath car option add karna.
+*   Live GPS Tracking.
+
+---
+
+### 🚀 Next Step:
+Aapka SDD ready hai! Ab agar aap chahein toh main aapko:
+1.  Iska **Hero Section ka HTML/CSS Code** likh kar de sakta hoon (jisme aapki neon image aur GIF lagegi).
+2.  Ya phir **Booking Form ka Code** de sakta hoon.
+
+Bataiye, code chahiye ya nahi? 😊
+Aapki di gayi images aur GIFs (Neon car, moving logos, dark background) ko dekh kar ek baat clear hai ki aapko **"Cinematic Dark Theme with Neon/Glow Accents"** chahiye. 
+
+Yeh theme premium, luxury aur high-tech feel degi. Main aapko **RajajiCar** ke liye ek detailed **Theme Style Guide** de raha hoon.
+
+---
+
+# 🎨 RajajiCar - Theme Style Guide
+
+## 1. Theme Concept: "Midnight Neon Luxury"
+*   **Vibe:** Dark, Sleek, Powerful, aur High-Tech.
+*   **Focus:** Raat ke waqt chamakti hui luxury cars (Neon lights effect) aur unke aage-piche moving (GIF) effect par focus.
+*   **Target:** Premium customers jo luxury aur speed pasand karte hain.
+
+---
+
+## 2. Color Palette (रंगों का चुनाव)
+Aapki neon car image ke hisaab se yeh colors perfect rahenge:
+
+*   **Primary Background:** `#0A0A0A` (Deep Matte Black) - Main background is color ka hoga.
+*   **Secondary Background:** `#161616` (Dark Charcoal) - Cards, Forms aur Navbar ke liye.
+*   **Accent Color (Glow):** `#FF5E00` (Neon Orange) - Buttons, Hover effects, aur Text highlights ke liye. (Aapki pehli image mein jo orange color hai).
+*   **Secondary Accent:** `#00E5FF` (Cyan/Neon Blue) - Agar aapko thoda tech-feel chahiye toh (Optional).
+*   **Text Color (Primary):** `#FFFFFF` (Pure White) - Headings ke liye.
+*   **Text Color (Secondary):** `#A0A0A0` (Light Grey) - Paragraphs aur details ke liye.
+
+---
+
+## 3. Typography (फॉन्ट स्टाइल)
+*   **Headings (Main Text):** **Montserrat** ya **Poppins** (Bold, 700/800 weight). Yeh fonts modern aur strong dikhte hain. Jaise "FAST & AFFORDABLE".
+*   **Body Text:** **Inter** ya **Roboto** (Regular, 400 weight). Padhne mein aasan.
+*   **Special Text (Logos/Brands):** **Orbitron** ya **Syncopate** (Thoda futuristic look ke liye).
+
+---
+
+## 4. UI Components & Effects (डिज़ाइन के तत्व)
+
+### A. Buttons (बटन)
+*   **Normal State:** Neon Orange (`#FF5E00`) background, White text, thoda sa rounded corner (8px).
+*   **Hover State:** Button ke peeche **Orange Glow (Box-shadow)** aayega. Mouse le jaane par button halka sa bada hoga.
+*   **Example:** "Book Now", "Search Car".
+
+### B. Cards (Car Listing Cards)
+*   **Background:** Dark Charcoal (`#161616`) with halki si border (`#333`).
+*   **Hover Effect:** Jab mouse card par jayega, toh card ka border Neon Orange ho jayega aur card halka sa upar uthega (Lift effect).
+*   **Car Image:** Transparent PNG ya GIF. Card ke andar car ka naam bold white mein, aur price Neon Orange mein.
+
+### C. Forms (Booking Form)
+*   **Style:** Dark glass effect (Glassmorphism). Background thoda transparent hoga taaki peeche ka neon effect dikhe.
+*   **Input Fields:** Dark background (`#1A1A1A`), Grey text. Jab user click kare (Focus), toh border Neon Orange glow karega.
+
+### D. Background & Textures
+*   **Hero Section:** Dark black background jisme halke se **Carbon Fiber pattern** ya **Grid lines** hon.
+*   **Gradients:** Black se Dark Grey tak ka gradient use karein taaki depth aaye. Neon car ke peeche ek **Radial Gradient (Orange to Transparent)** lagega jisse car chamkegi.
+
+---
+
+## 5. Animation Style (थीम के हिसाब से)
+*   **Neon Glow Pulse:** Buttons aur Brand logos par hamesha ek halka sa glow pulse karega.
+*   **Speed Lines:** Hero section mein text ke peeche halki si speed lines (horizontal) animate hongi.
+*   **Logo Marquee:** Brand logos (BMW, Audi, etc.) infinite loop mein left se right scroll honge (GIFs ki tarah).
+*   **Car Reveal:** Page load hone par car ka GIF ek smooth fade-in ke saath aayega aur halka sa zoom hoga.
+
+---
+
+## 6. Logo Style (RajajiCar ke liye)
+*   **Concept:** Ek "R" letter jo Neon Orange color mein chamak raha ho, aur uske niche ek chhoti si Road/speed line ho.
+*   **Text:** "RAJAJI" Bold White mein, aur "CAR" Neon Orange mein.
+*   **Effect:** Logo par hamesha ek subtle glow rahe.
+
+---
+
+## 7. Theme Layout (Preview Idea)
+
+```text
+[ Navbar: Black Background, Logo Left, Menu Center, Orange "Book Now" Button Right ]
+-----------------------------------------------------------------------------------------
+[ HERO SECTION: Deep Black Background + Neon Grid ]
+   - Text: "RENT PREMIUM CARS" (White, Bold)
+   - Subtext: "Fast & Affordable" (Orange)
+   - Form: Dark Glass effect with Orange glowing borders
+   - Right Side: [ NEON CAR GIF with Orange Glow behind it ]
+-----------------------------------------------------------------------------------------
+[ BRAND MARQUEE: Dark background, Moving Logo GIFs (BMW, Audi, Toyota...) ]
+-----------------------------------------------------------------------------------------
+[ POPULAR CARS: Dark Cards, Orange Price Text, Hover Lift Effect ]
+-----------------------------------------------------------------------------------------
+[ FOOTER: Black with Neon Orange Links ]
+```
+
+---
+
+### 💡 Pro Tip (Implementation ke liye)
+Agar aap is theme ko code kar rahe hain (HTML/CSS ya React), toh **Neon Glow** effect ke liye yeh CSS use karein:
+```css
+.neon-glow {
+  box-shadow: 0 0 10px #FF5E00, 0 0 20px #FF5E00, 0 0 40px #FF5E00;
+}
+.neon-text {
+  text-shadow: 0 0 5px #FF5E00, 0 0 10px #FF5E00;
+}
+```
+
+Yeh theme aapki di gayi saari images (Dark Neon Car, Moving Logos, Orange Accents) ke saath **perfect match** karegi aur website ko ekdum premium aur expensive look degi! 🚗🔥
+Aapki **RajajiCar** website ka theme "Midnight Neon Luxury" hai. Is theme ke hisaab se slider (carousel) ka style **smooth, cinematic aur fast** hona chahiye. Normal sliding se achha hai ki slider mein ek "speed" aur "tech" ka feel aaye.
+
+Yahan aapki website ke liye **4 alag-alag Slide Animation Styles** hain, jo aap apni requirement ke hisaab se use kar sakte hain:
+
+---
+
+### 1. Cinematic Split-Slide (Hero Section ke liye Best)
+Yeh animation luxury car websites (jaise BMW ya Mercedes ki site) par bahut common hai.
+*   **Kaise kaam karega:** Jab user arrow par click karega ya automatic slide hoga, toh screen do hisson mein bategi. Ek hissa (jisme text hai) upar ki taraf slide hoga aur doosra hissa (jisme Car GIF hai) niche ki taraf slide hoga, aur naya content beech se reveal hoga.
+*   **Vibe:** Bahut premium aur smooth. Isme text aur car alag-alag direction se aate hain.
+*   **Technique:** CSS `clip-path` + `transform: translateY`.
+
+### 2. Neon Glitch / Light Speed Slide (Dark Theme ke liye Perfect)
+Aapki neon car image aur dark background ke liye yeh sabse best hai.
+*   **Kaise kaam karega:** Jab next slide par jayenge, toh purani car ek second ke liye glitch hogi (jaise TV mein signal jata hai) aur phir ek Neon Orange/White light ki speed line left se right jayegi, aur nayi car us light ke saath "zoom" hokar aayegi.
+*   **Vibe:** Fast, High-tech, aur aggressive.
+*   **Technique:** GSAP library ya CSS Keyframes (Opacity + Blur + Scale).
+
+### 3. 3D Coverflow Slide (Car Cards / Brands ke liye)
+Yeh animation Apple ke products jaisi feel degi.
+*   **Kaise kaam karega:** Beech wali car seedhi aur badi dikhegi. Left aur Right side wali cars thodi choti, tilted (3D angle par) aur dark (dimmed) dikhengi. Jab user swipe karega, toh cars ek 3D circular motion mein ghoom kar center mein aayengi.
+*   **Vibe:** Interactive aur Modern.
+*   **Technique:** Swiper.js library ka `effect: 'coverflow'` use karein. (Bahut aasan hai).
+
+### 4. Infinite Marquee Slide (Aapke Diye Gaye Logo GIFs ke liye)
+Aapne jo BMW, Audi, Tata ke GIFs diye hain, unke liye normal slider nahi, **Marquee** use karein.
+*   **Kaise kaam karega:** Logos ek infinite loop mein continuously left se right move karte rahenge (jaise news channel ki patti chalti hai). Rukenge nahi. Jab user mouse upar rakhega, toh animation pause ho jayegi.
+*   **Vibe:** Trust-building aur Dynamic.
+*   **Technique:** CSS `@keyframes` with `translateX(-100%)` loop.
+
+---
+
+### 5. Parallax Fade Slide (Text aur Image ki Speed Alag)
+*   **Kaise kaam karega:** Slide change hote waqt Text (Heading) slow speed se fade hoga, aur Car GIF fast speed se slide hokar aayega. Isse ek depth ka effect aata hai ki car aage hai aur text peeche.
+*   **Vibe:** Elegant aur Cinematic.
+
+---
+
+### 💡 Ek Special Idea: "Headlight Blink" Transition
+Kyunki aapki website car rental ki hai, aap ek animation add kar sakte hain jismein:
+*   Jab slide change ho, toh ek second ke liye screen par **do white glowing dots (headlights)** aayen, aur phir achanak se nayi car wahan se nikal kar aaye. (Yeh thoda complex hai par bahut "WOW" factor dega).
+
+---
+
+### 🛠️ Developers ke liye Suggestion:
+Agar aap developer ko bata rahe hain, toh unhe yeh bolein:
+*   **Slider Library:** **Swiper.js** use karein (Yeh sabse best hai aur isme Coverflow, Fade, Slide sab built-in hai).
+*   **Animation:** Smoothness ke liye **GSAP** ya **Framer Motion** use karein.
+*   **Performance:** Slider mein GIFs load karte waqt **lazy loading** zaroor lagwayein, warna website slow ho jayegi.
+वाह! आपने बहुत ही शानदार और आधुनिक (Modern) एनिमेशन ट्रेंड्स की लिस्ट दी है। ये सभी ट्रेंड्स 2024-2025 की प्रीमियम वेबसाइटों में इस्तेमाल हो रहे हैं। 
+
+आपकी **RajajiCar** (Dark Neon Luxury Theme) के लिए ये सभी ट्रेंड्स बहुत फिट बैठते हैं। मैं आपको बताता हूँ कि इन ट्रेंड्स को हम अपनी वेबसाइट पर **कहाँ और कैसे** इस्तेमाल कर सकते हैं:
+
+---
+
+### 1. काइनेटिक टाइपोग्राफी (Kinetic Typography)
+*   **कहाँ इस्तेमाल करें:** Hero Section (Main Banner) में।
+*   **कैसे:** जब यूजर माउस को "FAST & AFFORDABLE" टेक्स्ट पर ले जाए, तो शब्द हल्के से फैलें (Stretch हों) और फिर वापस अपनी जगह आ जाएं। या फिर टेक्स्ट एक लहर (Wave) की तरह हिले।
+*   **वाइब:** यह वेबसाइट को बहुत ही हाई-टेक और इंटरैक्टिव लुक देगा।
+
+### 2. स्क्रॉलीटेलिंग (Scrollytelling)
+*   **कहाँ इस्तेमाल करें:** "Our Services" या "How it Works" सेक्शन में।
+*   **कैसे:** जब यूजर स्क्रॉल करे, तो एक-एक करके स्टेप्स सामने आएं। जैसे: 
+    *   स्टेप 1: कार चुनें (कार की इमेज आए)
+    *   स्टेप 2: डेट और लोकेशन डालें (कैलेंडर और मैप आए)
+    *   स्टेप 3: बुक करें (बुकिंग कन्फर्म का एनिमेशन आए)
+*   **वाइब:** यूजर को स्क्रॉल करने में मजा आएगा और वो पूरी प्रोसेस समझ जाएगा।
+
+### 3. रियल-टाइम 3D रेंडरिंग और WebGL
+*   **कहाँ इस्तेमाल करें:** Hero Section की मुख्य कार (Main Car) के लिए।
+*   **कैसे:** आपने जो नियॉन कार की इमेज दी है, उसकी जगह अगर हम एक **3D मॉडल** लगाएं, तो यूजर माउस घुमाकर कार को 360-डिग्री तक देख सकेगा। 
+*   **नोट:** यह थोड़ा महंगा और हैवी होता है। अगर बजट कम है, तो हम आपके दिए हुए **GIFs** को ही WebGL के जरिए हल्का-फुल्का 3D इफेक्ट दे सकते हैं।
+
+### 4. स्क्रॉल-ट्रिगर और स्क्रॉल-ऐसिंक्रोनस टेक्स्ट एनिमेशन
+*   **कहाँ इस्तेमाल करें:** "Our Most Popular Cars" सेक्शन में।
+*   **कैसे:** जब यूजर स्क्रॉल करेगा, तो कार्ड्स (Car Cards) अलग-अलग दिशाओं से आएंगे। जैसे बाईं तरफ से एक कार आएगी और दाईं तरफ से दूसरी। टेक्स्ट (जैसे कार का नाम) नीचे से ऊपर की ओर खिंचता हुआ आएगा।
+*   **वाइब:** यह वेबसाइट को डायनामिक बनाता है, यूजर को स्क्रॉल करने के लिए प्रेरित करता है।
+
+### 5. माइक्रो-इंटरएक्शन और होवर इफेक्ट्स
+*   **कहाँ इस्तेमाल करें:** बटन्स (Buttons) और ब्रांड लोगो (Brand Logos) पर।
+*   **कैसे:** 
+    *   **बटन:** "Book Now" बटन पर माउस ले जाने पर उसके चारों तरफ नियॉन ऑरेंज (Neon Orange) की चमक (Glow) आए।
+    *   **ब्रांड लोगो:** जो GIFs आपने दिए हैं (BMW, Audi आदि), वो ब्लैक एंड व्हाइट हों। जब माउस उन पर जाए, तो वो रंगीन (Color) हो जाएं और हल्के से बड़े हो जाएं।
+    *   **कार्ड:** कार के कार्ड पर माउस ले जाने पर कार्ड हल्का सा ऊपर उठे (Lift Effect)।
+
+### 6. टैक्टाइल रियलिज्म (Tactile Realism)
+*   **कहाँ इस्तेमाल करें:** बुकिंग फॉर्म (Booking Form) में।
+*   **कैसे:** जब यूजर फॉर्म में कोई जानकारी भरे (जैसे लोकेशन टाइप करे), तो इनपुट बॉक्स में एक हल्का सा "क्लिक" या "प्रेस" होने का एहसास हो (जैसे असली बटन दबाया हो)। साथ ही, जब बुकिंग कन्फर्म हो, तो एक **असली रसीद (Receipt) निकलने** जैसा एनिमेशन हो।
+
+---
+
+### 💡 इन सभी ट्रेंड्स को अपनी वेबसाइट पर लागू करने का तरीका:
+
+अगर आप अपनी वेबसाइट पर ये सारे ट्रेंड्स एक साथ लगाएंगे, तो वेबसाइट बहुत **भारी (Heavy)** हो जाएगी और स्लो चलेगी। इसलिए मेरी सलाह है:
+
+1.  **हीरो सेक्शन** में सिर्फ **काइनेटिक टाइपोग्राफी** और **3D/Neon Car GIF** का इस्तेमाल करें।
+2.  **कार लिस्टिंग** में **स्क्रॉल-ट्रिगर एनिमेशन** और **होवर इफेक्ट्स** लगाएं।
+3.  **बुकिंग फॉर्म** में **टैक्टाइल रियलिज्म** (बटन दबाने का एहसास) और **माइक्रो-इंटरएक्शन** लगाएं।
+
+**तकनीकी रूप से (Technically):**
+इन सभी को बनाने के लिए डेवलपर को **GSAP (GreenSock)**, **Framer Motion**, और **Three.js (WebGL के लिए)** का इस्तेमाल करना होगा। 
+
+क्या आप चाहते हैं कि मैं इनमें से किसी एक ट्रेंड (जैसे **काइनेटिक टाइपोग्राफी** या **होवर इफेक्ट**) का **कोड (HTML/CSS/JS)** लिखकर दूँ, ताकि आप अपनी वेबसाइट पर टेस्ट कर सकें?
+Aapki **RajajiCar** वेबसाइट के "Midnight Neon Luxury" थीम के हिसाब से बुकिंग सिस्टम का UI (User Interface) बहुत ही आसान, प्रीमियम और इंटरैक्टिव होना चाहिए। 
+
+यहाँ मैं आपको बुकिंग सिस्टम के UI का **विज़ुअल लेआउट (Visual Layout)** और **डिज़ाइन स्टाइल** समझा रहा हूँ:
+
+---
+
+### 📱 Booking System UI Layout (डिज़ाइन का ढांचा)
+
+बुकिंग सिस्टम को हम **3 हिस्सों** में बांट सकते हैं:
+
+#### 1. Quick Search Bar (होम पेज पर - Hero Section के नीचे)
+यह एक पट्टी (Strip) जैसी दिखेगी जिसमें 4 बॉक्स होंगे। बैकग्राउंड डार्क ग्लास (Glassmorphism) होगा।
+*   **Box 1:** 📍 Pick-up Location (Input Field)
+*   **Box 2:** 📅 Pick-up Date & Time (Calendar Icon)
+*   **Box 3:** 📍 Drop-off Location (Input Field)
+*   **Box 4:** 📅 Return Date & Time (Calendar Icon)
+*   **Button:** 🟠 **Search Cars** (Neon Orange Glow के साथ)
+
+#### 2. Detailed Booking Form (जब यूजर कार पसंद कर ले)
+जब यूजर किसी कार (जैसे BMW M3) पर "Book Now" क्लिक करेगा, तो एक पेज या पॉप-अप (Modal) खुलेगा जिसमें 2 कॉलम होंगे:
+*   **Left Column (कार की जानकारी):** कार की तस्वीर, नाम, प्रति दिन किराया (₹ 5000/day), फीचर्स (AC, 5 Seater, Automatic)।
+*   **Right Column (फॉर्म):** 
+    *   Full Name (पूरा नाम)
+    *   Mobile Number (मोबाइल नंबर)
+    *   Email Address (ईमेल)
+    *   Pick-up Date & Time
+    *   Return Date & Time
+    *   Pick-up Address
+    *   🟠 **Confirm Booking** (बड़ा ऑरेंज बटन)
+
+#### 3. Booking Summary (रसीद/बिल स्टाइल)
+फॉर्म भरने के बाद एक छोटा सा बॉक्स खुलेगा जिसमें कुल खर्चा दिखेगा:
+*   Car Rent: ₹5000 x 2 Days = ₹10,000
+*   Taxes & Fees: ₹1,000
+*   **Total Payable: ₹11,000** (बड़ा और बोल्ड)
+*   Pay Now (या Pay on Delivery) बटन।
+
+---
+
+### 🎨 UI Design Style (डिज़ाइन कैसा दिखेगा?)
+
+#### A. Colors (रंग)
+*   **Background:** Deep Black / Dark Grey (`#0A0A0A`)
+*   **Input Boxes:** Dark Grey (`#1A1A1A`) with halki सी Border (`#333`)
+*   **Text:** White (Labels के लिए) और Light Grey (Placeholder के लिए)
+*   **Active/Focus State:** जब यूजर किसी बॉक्स पर क्लिक करे, तो उसका Border **Neon Orange (`#FF5E00`)** हो जाए और हल्का सा Glow करे।
+*   **Button:** Neon Orange Gradient (`#FF5E00` to `#FF8C00`)
+
+#### B. Fonts (फॉन्ट)
+*   **Labels (जैसे "Full Name"):** Poppins (Semi-Bold, 14px)
+*   **Input Text:** Inter (Regular, 16px)
+*   **Summary Amount:** Montserrat (Bold, 24px)
+
+#### C. Icons (आइकॉन)
+*   Location के लिए Map Pin 📍
+*   Date के लिए Calendar 📅
+*   Time के लिए Clock ⏰
+*   User के लिए Profile Icon 👤
+*   Payment के लिए Credit Card 💳
+*   *(ये सभी आइकॉन Neon Orange या White कलर में होंगे)*
+
+---
+
+### ✨ Animations (इंटरैक्शन)
+
+1.  **Focus Glow:** जब यूजर "Pick-up Location" पर क्लिक करे, तो उस बॉक्स के चारों तरफ एक ऑरेंज लाइट जलनी चाहिए (Glow Effect)।
+2.  **Calendar Slide-in:** डेट चुनने के लिए जब कैलेंडर खुले, तो वो नीचे से स्लाइड होकर आए (Pop-up नहीं)।
+3.  **Button Hover:** "Confirm Booking" बटन पर माउस ले जाने पर बटन थोड़ा सा बड़ा हो और उसके पीछे ऑरेंज ग्लो बढ़ जाए।
+4.  **Validation (गलती सुधार):** अगर यूजर मोबाइल नंबर गलत डाले, तो बॉक्स का बॉर्डर लाल (Red) हो जाए और हल्का सा हिले (Shake Animation)।
+5.  **Success Animation:** बुकिंग कन्फर्म होने पर एक हरा (Green) टिक (✔) स्क्रीन पर बने और "Booking Confirmed!" का टेक्स्ट आए।
+
+---
+
+### 💻 कोड का उदाहरण (HTML/CSS - बेसिक स्ट्रक्चर)
+
+अगर आप खुद से इसे बनाना चाहते हैं, तो यह एक बेसिक स्ट्रक्चर है:
+
+```html
+<div class="booking-form-container">
+  <h2>Book Your Car</h2>
+  <form>
+    <div class="input-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" required>
+    </div>
+    
+    <div class="input-group">
+      <label>Mobile Number</label>
+      <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+    </div>
+
+    <div class="row">
+      <div class="input-group">
+        <label>Pick-up Date</label>
+        <input type="date" required>
+      </div>
+      <div class="input-group">
+        <label>Return Date</label>
+        <input type="date" required>
+      </div>
+    </div>
+
+    <button type="submit" class="neon-btn">Confirm Booking</button>
+  </form>
+</div>
+```
+
+```css
+/* CSS for Neon Theme */
+.booking-form-container {
+  background: #161616;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  color: white;
+}
+
+.input-group input {
+  width: 100%;
+  background: #0A0A0A;
+  border: 1px solid #333;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+/* Focus Effect */
+.input-group input:focus {
+  border-color: #FF5E00;
+  box-shadow: 0 0 10px rgba(255, 94, 0, 0.5);
+  outline: none;
+}
+
+/* Button Style */
+.neon-btn {
+  width: 100%;
+  background: #FF5E00;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.neon-btn:hover {
+  box-shadow: 0 0 15px #FF5E00, 0 0 30px #FF5E00;
+  transform: translateY(-2px);
+}
+```
+
+**मेरा सुझाव:** अगर आप प्रोफेशनल बुकिंग सिस्टम चाहते हैं (जहाँ पेमेंट और SMS अलर्ट हो), तो आपको **Razorpay** या **Stripe** जैसे पेमेंट गेटवे को इंटीग्रेट करना होगा। UI के लिए आप **Tailwind CSS** का इस्तेमाल कर सकते हैं, यह डार्क थीम के लिए बहुत बढ़िया है।
+
+क्या आप चाहते हैं कि मैं **Quick Search Bar** का पूरा कोड (HTML + CSS + थोड़ा JS) लिखकर दूँ जिसे आप अपनी वेबसाइट पर सीधे चला सकें?
+Aapki **RajajiCar** वेबसाइट के "Midnight Neon Luxury" (Dark Theme) के लिए मैंने यहाँ एक **Complete CSS Style Guide** तैयार किया है। इसमें फॉन्ट्स, कलर्स, बटन्स, इनपुट फील्ड्स और कार्ड्स की पूरी स्टाइलिंग है। 
+
+आप इस कोड को अपनी वेबसाइट में सीधे कॉपी-पेस्ट कर सकते हैं।
+
+---
+
+### 1. Fonts & Typography (फॉन्ट सेटिंग)
+सबसे पहले Google Fonts से फॉन्ट्स को इम्पोर्ट करें। हेडिंग्स के लिए **Montserrat** (बोल्ड और प्रीमियम) और टेक्स्ट के लिए **Inter** (साफ पढ़ने योग्य) बेस्ट है।
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800;900&display=swap');
+
+:root {
+  /* Colors */
+  --bg-dark: #0A0A0A;          /* Main Background */
+  --bg-card: #161616;          /* Card / Form Background */
+  --bg-input: #1A1A1A;         /* Input Fields */
+  --neon-orange: #FF5E00;      /* Primary Accent (Buttons/Glow) */
+  --neon-orange-hover: #E65400;
+  --text-white: #FFFFFF;       /* Headings */
+  --text-grey: #A0A0A0;        /* Paragraphs */
+  --border-color: #333333;     /* Input Borders */
+}
+
+/* Global Base Styles */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.1; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
+p { color: var(--text-grey); font-size: 1rem; }
+
+/* Highlight Text (जैसे "FAST & AFFORDABLE") */
+.text-orange { color: var(--neon-orange); }
+```
+
+---
+
+### 2. Neon Buttons (बटन स्टाइल)
+बटन पर माउस ले जाने पर नियॉन ग्लो (Neon Glow) आएगा।
+
+```css
+.btn-neon {
+  background-color: var(--neon-orange);
+  color: var(--text-white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-neon:hover {
+  background-color: var(--neon-orange-hover);
+  /* Neon Glow Effect */
+  box-shadow: 0 0 15px rgba(255, 94, 0, 0.6), 0 0 30px rgba(255, 94, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.btn-neon:active {
+  transform: translateY(0);
+}
+```
+
+---
+
+### 3. Forms & Input Fields (बुकिंग फॉर्म)
+डार्क थीम में इनपुट बॉक्स थोड़े डार्क होंगे और क्लिक करने पर ऑरेंज ग्लो करेंगे।
+
+```css
+.form-container {
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-grey);
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-white);
+  padding: 14px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Input Focus Effect */
+.form-control:focus {
+  outline: none;
+  border-color: var(--neon-orange);
+  box-shadow: 0 0 10px rgba(255, 94, 0, 0.2);
+}
+
+.form-control::placeholder {
+  color: #555;
+}
+```
+
+---
+
+### 4. Car Cards (कार लिस्टिंग स्टाइल)
+कार्ड्स डार्क होंगे, और होवर करने पर हल्के से ऊपर उठेंगे (Lift Effect)।
+
+```css
+.car-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.car-card:hover {
+  border-color: var(--neon-orange);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(255, 94, 0, 0.1);
+}
+
+.car-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.car-card:hover img {
+  transform: scale(1.05); /* Image Zoom Effect */
+}
+
+.car-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+}
+
+.car-price {
+  color: var(--neon-orange);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.car-features {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  color: var(--text-grey);
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+```
+
+---
+
+### 5. Quick Search Bar (होम पेज पर बुकिंग पट्टी)
+यह ग्लास इफेक्ट (Glassmorphism) वाला पट्टी होगी जो Hero Section के नीचे लगेगी।
+
+```css
+.quick-search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: rgba(22, 22, 22, 0.7); /* Semi-transparent */
+  backdrop-filter: blur(10px);       /* Glass Blur Effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-top: -30px; /* Hero से थोड़ा ऊपर */
+  position: relative;
+  z-index: 10;
+}
+
+.quick-search-bar .form-control {
+  border: none;
+  background: transparent;
+  border-right: 1px solid var(--border-color);
+  border-radius: 0;
+}
+
+.quick-search-bar .form-control:last-child {
+  border-right: none;
+}
+```
+
+---
+
+### 6. Navbar (हेडर स्टाइल)
+नेविगेशन बार ट्रांसपेरेंट होगा, लेकिन स्क्रॉल करने पर डार्क हो जाएगा।
+
+```css
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-links a {
+  color: var(--text-white);
+  text-decoration: none;
+  margin: 0 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--neon-orange);
+}
+```
+
+---
+
+### 💡 इसे कैसे इस्तेमाल करें?
+1. अपनी HTML फाइल के `<head>` में ऊपर दिया गया `@import` और `:root` वाला कोड डालें।
+2. अपने HTML एलिमेंट्स में इन क्लासेस को जोड़ें। जैसे:
+```html
+<button class="btn-neon">Book Now</button>
+
+<div class="car-card">
+  <img src="car-image.jpg" alt="BMW M3">
+  <h3 class="car-title">BMW M3</h3>
+  <div class="car-price">$250 / Day</div>
+  <button class="btn-neon">Rent Now</button>
+</div>
+```
+
+अगर आप चाहते हैं कि मैं इन सभी CSS को मिलाकर एक **पूरा HTML पेज (Complete Template)** बना दूँ, जिसमें हेडर, हीरो सेक्शन और बुकिंग फॉर्म हो, तो मुझे बताइए! 🚗🔥
+आपकी **RajajiCar** वेबसाइट के लिए "इंटरेक्टिव व्हीकल सिलेक्शन" (Interactive Vehicle Selection) एक बहुत ही शानदार आइडिया है। इससे यूजर को सिर्फ ड्रॉपडाउन से कार चुनने में मजा नहीं आता, बल्कि वो कारों को देखकर, छूकर और महसूस करके (Tactile Realism) चुन सकता है।
+
+आपके **Neon Dark Theme** के हिसाब से मैं यहाँ 3 बेहतरीन इंटरेक्टिव व्हीकल सिलेक्शन स्टाइल्स दे रहा हूँ:
+
+---
+
+### 1. 3D कार कैरोसेल (3D Coverflow Carousel) - सबसे प्रीमियम
+यह Apple की वेबसाइट जैसा फील देगा।
+*   **कैसे काम करेगा:** स्क्रीन के बीच में एक बड़ी कार (GIF या 3D मॉडल) होगी। बाईं और दाईं तरफ बाकी कारें थोड़ी छोटी और तिरछी (Tilted) दिखेंगी।
+*   **इंटरएक्शन:** जब यूजर बाईं या दाईं तरफ स्वाइप करेगा (या माउस घुमाएगा), तो कारें एक 3D घेरे में घूमकर बीच में आएंगी।
+*   **इफेक्ट:** बीच वाली कार के पीछे **Neon Orange Glow** होगा। जैसे ही कार बदलेगी, उसका नाम और कीमत (Price) नीचे फेड-इन (Fade-in) होकर आएगी।
+
+### 2. इंटरेक्टिव कार कार्ड्स (Hover & Click) - सबसे आसान
+यह आपकी दी हुई इमेज (Grid Layout) जैसा होगा, लेकिन एनिमेटेड।
+*   **कैसे काम करेगा:** कारों के कार्ड्स (Cards) ग्रिड में होंगे।
+*   **इंटरएक्शन:** 
+    *   जब यूजर माउस किसी कार्ड पर ले जाएगा, तो कार की स्टैटिक इमेज हटकर उसकी **GIF (जैसे आपने BMW की दी है)** चालू हो जाएगी। 
+    *   कार्ड का बॉर्डर Neon Orange हो जाएगा।
+    *   कार्ड के नीचे "Select This Car" बटन स्लाइड होकर बाहर आएगा।
+*   **इफेक्ट:** यूजर को लगेगा कि कार स्टार्ट हो गई है।
+
+### 3. स्वाइप-टू-सिलेक्ट (Tinder Style Swipe) - मोबाइल के लिए बेस्ट
+*   **कैसे काम करेगा:** यूजर को एक बार में एक ही कार दिखेगी (बड़ी इमेज के साथ)।
+*   **इंटरएक्शन:** अगर यूजर को कार पसंद आए, तो वो उसे राइट स्वाइप करे (या "Book" बटन दबाए), और अगर पसंद न आए तो लेफ्ट स्वाइप करे (या "Skip" दबाए)।
+*   **इफेक्ट:** कार स्वाइप होते हुए स्क्रीन से बाहर निकलेगी और अगली कार पीछे से आएगी। यह यूजर को एंगेज रखता है।
+
+---
+
+### 💻 कोड उदाहरण (Interactive Car Cards)
+
+यहाँ HTML और CSS का एक उदाहरण है जिसमें होवर करने पर कार्ड बड़ा होगा और "Select" बटन बाहर आएगा:
+
+**HTML:**
+```html
+<div class="car-selection-grid">
+  
+  <!-- Card 1 -->
+  <div class="interactive-car-card">
+    <div class="car-image-container">
+      <img src="bmw-static.jpg" class="static-img" alt="BMW">
+      <!-- Hover करने पर GIF चालू होगी -->
+      <img src="bmw-car.gif" class="gif-img" alt="BMW GIF">
+    </div>
+    <div class="car-info">
+      <h3>BMW M3</h3>
+      <p class="price">$250 / Day</p>
+      <button class="select-btn">Select Vehicle</button>
+    </div>
+  </div>
+
+  <!-- Card 2 (Aise hi aur bana sakte hain) -->
+  
+</div>
+```
+
+**CSS (Neon Theme):**
+```css
+.car-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.interactive-car-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* होवर इफेक्ट */
+.interactive-car-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--neon-orange);
+  box-shadow: 0 15px 30px rgba(255, 94, 0, 0.15); /* Neon Glow */
+}
+
+/* इमेज कंटेनर */
+.car-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* स्टैटिक इमेज और GIF दोनों को एक ही जगह रखेंगे */
+.static-img, .gif-img {
+  width: 100%;
+  max-width: 250px;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+/* डिफ़ॉल्ट रूप से GIF छिपी रहेगी */
+.gif-img {
+  opacity: 0;
+}
+
+/* होवर करने पर स्टैटिक हटेगी और GIF दिखेगी */
+.interactive-car-card:hover .static-img {
+  opacity: 0;
+}
+.interactive-car-card:hover .gif-img {
+  opacity: 1;
+}
+
+/* बटन जो पहले छिपा रहेगा */
+.select-btn {
+  background-color: transparent;
+  color: var(--neon-orange);
+  border: 2px solid var(--neon-orange);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+  opacity: 0; /* पहले अदृश्य */
+  transform: translateY(20px); /* नीचे छिपा हुआ */
+  transition: all 0.4s ease;
+}
+
+/* होवर करने पर बटन बाहर आएगा */
+.interactive-car-card:hover .select-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.select-btn:hover {
+  background-color: var(--neon-orange);
+  color: white;
+  box-shadow: 0 0 15px var(--neon-orange);
+}
+```
+
+---
+
+### 🛠️ तकनीकी सलाह (Developers के लिए):
+1.  **3D Carousel के लिए:** **Swiper.js** (effect: 'coverflow') का इस्तेमाल करें। यह बहुत स्मूथ चलता है।
+2.  **GIF Hover के लिए:** अगर GIF भारी है, तो पेज लोड होते ही वो लोड न हो, बल्कि जब यूजर होवर करे तभी लोड हो (Lazy Loading)। इससे वेबसाइट स्पीड बढ़ेगी।
+3.  **3D मॉडल के लिए:** अगर आप **Three.js** का इस्तेमाल करना चाहते हैं, तो एक बेसिक 3D कार मॉडल (.gltf फॉर्मेट में) लगाएं जिसे यूजर माउस से घुमा सके।
+
+क्या आप चाहते हैं कि मैं **3D Coverflow Carousel** का जावास्क्रिप्ट (Swiper.js) वाला पूरा कोड लिखकर दूँ?  
+
+बहुत बढ़िया! **स्मार्ट सर्च और फिल्टर** किसी भी कार रेंटल वेबसाइट की रीढ़ (Backbone) होता है। अगर यूजर को अपनी पसंद की कार आसानी से नहीं मिली, तो वो वेबसाइट छोड़ देता है। 
+
+आपकी **RajajiCar** के "Midnight Neon Luxury" थीम के हिसाब से मैंने यहाँ एक **Smart Search & Filter System** का पूरा ब्लूप्रिंट और कोड तैयार किया है।
+
+---
+
+### 🎯 1. स्मार्ट सर्च का लेआउट (UI Layout)
+
+स्मार्ट सर्च को दो हिस्सों में बांटा जाएगा:
+
+#### A. Quick Search Bar (होम पेज के हीरो सेक्शन में)
+यह एक पट्टी (Strip) होगी जो ग्लास इफेक्ट (Glassmorphism) के साथ डार्क बैकग्राउंड पर तैरती हुई दिखेगी।
+*   📍 **Pick-up Location** (इनपुट बॉक्स)
+*   📍 **Drop-off Location** (इनपुट बॉक्स)
+*   📅 **Pick-up Date & Time** (कैलेंडर + टाइम)
+*   📅 **Return Date & Time** (कैलेंडर + टाइम)
+*   🟠 **"Search Cars"** (नियॉन ऑरेंज बटन)
+
+#### B. Advanced Filters (कार लिस्टिंग पेज के साइड में)
+जब यूजर "Search" पर क्लिक करेगा, तो लिस्टिंग पेज खुलेगा जहाँ बाईं तरफ (Left Sidebar) ये फिल्टर्स होंगे:
+*   **Car Type:** Sedan, SUV, Hatchback, Luxury
+*   **Transmission:** Auto, Manual (चेकबॉक्स)
+*   **Fuel Type:** Petrol, Diesel, EV (Electric), CNG
+*   **Price Range:** ₹1000 - ₹10000 (Slider)
+*   **Seats:** 4, 5, 7 (आइकन के साथ)
+
+---
+
+### 💻 2. कोड (HTML + CSS + JavaScript)
+
+यहाँ पूरा कोड है जिसे आप अपनी वेबसाइट पर सीधे इस्तेमाल कर सकते हैं। इसमें **Neon Dark Theme** और **Live Filtering** (बिना पेज रीलोड किए फिल्टर होना) का काम किया गया है।
+
+#### HTML (स्ट्रक्चर)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RajajiCar - Smart Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Quick Search Bar (Hero Section) -->
+  <div class="quick-search-bar">
+    <div class="input-group">
+      <label>Pick-up Location</label>
+      <input type="text" placeholder="City, Airport, etc.">
+    </div>
+    <div class="input-group">
+      <label>Pick-up Date</label>
+      <input type="datetime-local">
+    </div>
+    <div class="input-group">
+      <label>Drop-off Location</label>
+      <input type="text" placeholder="City, Airport, etc.">
+    </div>
+    <div class="input-group">
+      <label>Return Date</label>
+      <input type="datetime-local">
+    </div>
+    <button class="btn-neon">Search Cars</button>
+  </div>
+
+  <!-- 2. Main Filter & Listing Section -->
+  <div class="listing-container">
+    
+    <!-- Sidebar Filters -->
+    <aside class="filters-sidebar">
+      <h3>Filters</h3>
+      
+      <!-- Filter: Car Type -->
+      <div class="filter-group">
+        <h4>Car Type</h4>
+        <label><input type="checkbox" value="SUV" class="filter-checkbox"> SUV</label>
+        <label><input type="checkbox" value="Sedan" class="filter-checkbox"> Sedan</label>
+        <label><input type="checkbox" value="Luxury" class="filter-checkbox"> Luxury</label>
+      </div>
+
+      <!-- Filter: Transmission -->
+      <div class="filter-group">
+        <h4>Transmission</h4>
+        <label><input type="checkbox" value="Auto" class="filter-checkbox"> Automatic</label>
+        <label><input type="checkbox" value="Manual" class="filter-checkbox"> Manual</label>
+      </div>
+
+      <!-- Filter: Fuel Type -->
+      <div class="filter-group">
+        <h4>Fuel Type</h4>
+        <label><input type="checkbox" value="Petrol" class="filter-checkbox"> Petrol</label>
+        <label><input type="checkbox" value="Diesel" class="filter-checkbox"> Diesel</label>
+        <label><input type="checkbox" value="EV" class="filter-checkbox"> Electric (EV)</label>
+      </div>
+
+      <!-- Filter: Price Range -->
+      <div class="filter-group">
+        <h4>Max Price (Per Day)</h4>
+        <input type="range" min="1000" max="10000" value="10000" id="priceRange">
+        <p>Up to: ₹<span id="priceValue">10000</span></p>
+      </div>
+    </aside>
+
+    <!-- Car Listing Area -->
+    <main class="car-listings">
+      <div class="listing-header">
+        <h2>Available Cars</h2>
+        <p id="result-count">Showing 4 cars</p>
+      </div>
+
+      <div class="cars-grid" id="carGrid">
+        <!-- Card 1 -->
+        <div class="car-card" data-type="SUV" data-transmission="Auto" data-fuel="Petrol" data-price="5000">
+          <img src="car1.jpg" alt="Toyota Fortuner">
+          <h3>Toyota Fortuner</h3>
+          <p class="specs">SUV | Auto | Petrol</p>
+          <p class="price">₹5000 / Day</p>
+          <button class="btn-neon">Book Now</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="car-card" data-type="Luxury" data-transmission="Auto" data-fuel="Petrol" data-price="8000">
+          <img src="car2.jpg" alt="BMW M3">
+          <h3>BMW M3</h3>
+          <p class="specs">Luxury | Auto | Petrol</p>
+          <p class="price">₹8000 / Day</p>
+          <button class="btn-neon">Book Now</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="car-card" data-type="Sedan" data-transmission="Manual" data-fuel="EV" data-price="3000">
+          <img src="car3.jpg" alt="Tata Tigor EV">
+          <h3>Tata Tigor EV</h3>
+          <p class="specs">Sedan | Manual | EV</p>
+          <p class="price">₹3000 / Day</p>
+          <button class="btn-neon">Book Now</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="car-card" data-type="SUV" data-transmission="Manual" data-fuel="Diesel" data-price="4000">
+          <img src="car4.jpg" alt="Mahindra Thar">
+          <h3>Mahindra Thar</h3>
+          <p class="specs">SUV | Manual | Diesel</p>
+          <p class="price">₹4000 / Day</p>
+          <button class="btn-neon">Book Now</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+#### CSS (style.css)
+```css
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-card: #161616;
+  --bg-input: #1A1A1A;
+  --neon-orange: #FF5E00;
+  --text-white: #FFFFFF;
+  --text-grey: #A0A0A0;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Quick Search Bar */
+.quick-search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: rgba(22, 22, 22, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.input-group label {
+  font-size: 0.8rem;
+  color: var(--text-grey);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: white;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.btn-neon {
+  background: var(--neon-orange);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 15px var(--neon-orange);
+}
+
+/* Main Layout */
+.listing-container {
+  display: flex;
+  gap: 30px;
+}
+
+/* Sidebar Filters */
+.filters-sidebar {
+  width: 250px;
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  height: fit-content;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+}
+
+.filter-group h4 {
+  margin-bottom: 10px;
+  color: var(--neon-orange);
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-grey);
+  cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+  accent-color: var(--neon-orange);
+  margin-right: 8px;
+}
+
+/* Car Grid */
+.car-listings {
+  flex: 1;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.car-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.car-card:hover {
+  border-color: var(--neon-orange);
+  transform: translateY(-5px);
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.car-card h3 {
+  margin: 10px 0;
+}
+
+.specs {
+  font-size: 0.8rem;
+  color: var(--text-grey);
+}
+
+.price {
+  color: var(--neon-orange);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+```
+
+#### JavaScript (script.js - Live Filtering Logic)
+यह जावास्क्रिप्ट कोड यूजर के फिल्टर सेलेक्ट करते ही बिना पेज रीलोड किए कारों को छांट देगा।
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+  const checkboxes = document.querySelectorAll('.filter-checkbox');
+  const priceRange = document.getElementById('priceRange');
+  const priceValue = document.getElementById('priceValue');
+  const carCards = document.querySelectorAll('.car-card');
+  const resultCount = document.getElementById('result-count');
+
+  // Price Slider Update
+  priceRange.addEventListener('input', () => {
+    priceValue.textContent = priceRange.value;
+    filterCars();
+  });
+
+  // Checkbox Change Event
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', filterCars);
+  });
+
+  function filterCars() {
+    // Get all selected filter values
+    const selectedFilters = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value.toLowerCase());
+
+    const maxPrice = parseInt(priceRange.value);
+    let visibleCars = 0;
+
+    carCards.forEach(card => {
+      const carType = card.dataset.type.toLowerCase();
+      const carTrans = card.dataset.transmission.toLowerCase();
+      const carFuel = card.dataset.fuel.toLowerCase();
+      const carPrice = parseInt(card.dataset.price);
+
+      // Check if car matches filters
+      const matchesFilters = selectedFilters.every(filter => 
+        carType.includes(filter) || carTrans.includes(filter) || carFuel.includes(filter)
+      );
+
+      const matchesPrice = carPrice <= maxPrice;
+
+      if (matchesFilters && matchesPrice) {
+        card.style.display = 'block';
+        // Animation effect
+        card.style.animation = 'fadeIn 0.5s ease';
+        visibleCars++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    resultCount.textContent = `Showing ${visibleCars} cars`;
+  }
+});
+```
+
+---
+
+### ⚙️ 3. स्मार्ट सर्च को और स्मार्ट कैसे बनाएं? (Advanced Features)
+
+अगर आप इसे प्रोफेशनल बनाना चाहते हैं, तो इन चीजों को जोड़ें:
+
+1.  **Auto-Suggestion (Location API):** जब यूजर "Pick-up Location" में टाइप करे (जैसे "Del"), तो नीचे "Delhi Airport", "Delhi Railway Station" जैसे सुझाव (Suggestions) आएं। इसके लिए **Google Maps Places API** का इस्तेमाल करें।
+2.  **Date Validation:** अगर यूजर आज की तारीख से पहले की तारीख डालता है, तो उसे एरर (Error) दिखे। और रिटर्न डेट हमेशा पिक-अप डेट के बाद की ही सेलेक्ट हो सके।
+3.  **URL Parameters:** जब यूजर सर्च करे, तो URL में डेटा चला जाए (जैसे: `rajajicar.com/cars?type=SUV&fuel=Petrol`)। इससे अगर यूजर लिंक कॉपी करके किसी को भेजे, तो उसके पास भी वही सर्च रिजल्ट खुले।
+4.  **"No Results Found":** अगर कोई कार फिल्टर से मेल नहीं खाती, तो स्क्रीन पर एक अच्छा सा मैसेज आए: *"No cars found matching your criteria. Try changing filters."*
+
+क्या आप चाहते हैं कि मैं **Date Validation (तारीख की जांच)** का जावास्क्रिप्ट कोड भी लिख दूँ, जिससे यूजर गलत तारीख न डाल सके?
+बिल्कुल! यह आपकी **RajajiCar** वेबसाइट का सबसे महत्वपूर्ण हिस्सा है। एक अच्छा "स्मार्ट सर्च और फिल्टर" यूजर को तुरंत उसी कार तक पहुँचा देता है जो उसे चाहिए।
+
+चूँकि आपने पहले **Neon Dark Theme** और **Glassmorphism** की बात की थी, मैं आपको इसका एक **Complete, Ready-to-use Code (HTML + CSS + JS)** दे रहा हूँ। इसमें लोकेशन, तारीख, समय और कार टाइप (Auto/Manual, Petrol/EV) के हिसाब से **Live Filtering** होगी (बिना पेज रीलोड किए)।
+
+---
+
+### 1. HTML (स्ट्रक्चर)
+यहाँ Quick Search Bar और साइडबार फिल्टर्स दोनों हैं।
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RajajiCar - Smart Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Quick Search Bar (Hero Section) -->
+  <div class="quick-search-container">
+    <h2>Find Your Perfect Ride</h2>
+    <div class="search-bar">
+      
+      <div class="input-box">
+        <label>📍 Pick-up Location</label>
+        <input type="text" id="pickupLocation" placeholder="Enter city or airport">
+      </div>
+
+      <div class="input-box">
+        <label>📅 Pick-up Date & Time</label>
+        <input type="datetime-local" id="pickupDate">
+      </div>
+
+      <div class="input-box">
+        <label>📍 Drop-off Location</label>
+        <input type="text" id="dropoffLocation" placeholder="Enter city or airport">
+      </div>
+
+      <div class="input-box">
+        <label>📅 Return Date & Time</label>
+        <input type="datetime-local" id="returnDate">
+      </div>
+
+      <button class="btn-neon" id="searchBtn">Search Cars</button>
+    </div>
+  </div>
+
+  <!-- 2. Main Filter & Listing Section -->
+  <div class="listing-container">
+    
+    <!-- Sidebar Filters -->
+    <aside class="filters-sidebar">
+      <h3>Filters</h3>
+      
+      <!-- Transmission Filter -->
+      <div class="filter-group">
+        <h4>Transmission</h4>
+        <label><input type="checkbox" class="filter-cb" value="Auto" checked> Automatic</label>
+        <label><input type="checkbox" class="filter-cb" value="Manual" checked> Manual</label>
+      </div>
+
+      <!-- Fuel Type Filter -->
+      <div class="filter-group">
+        <h4>Fuel Type</h4>
+        <label><input type="checkbox" class="filter-cb" value="Petrol" checked> Petrol</label>
+        <label><input type="checkbox" class="filter-cb" value="Diesel" checked> Diesel</label>
+        <label><input type="checkbox" class="filter-cb" value="EV" checked> Electric (EV)</label>
+      </div>
+
+      <!-- Price Range Filter -->
+      <div class="filter-group">
+        <h4>Max Price (Per Day)</h4>
+        <input type="range" min="1000" max="10000" value="10000" id="priceRange">
+        <p>Up to: ₹<span id="priceValue">10000</span></p>
+      </div>
+    </aside>
+
+    <!-- Car Listing Area -->
+    <main class="car-listings">
+      <div class="listing-header">
+        <h2>Available Cars</h2>
+        <p id="result-count">Showing 4 cars</p>
+      </div>
+
+      <div class="cars-grid" id="carGrid">
+        <!-- Card 1 -->
+        <div class="car-card" data-transmission="Auto" data-fuel="Petrol" data-price="5000">
+          <img src="https://via.placeholder.com/300x150?text=Toyota+Fortuner" alt="Toyota Fortuner">
+          <h3>Toyota Fortuner</h3>
+          <p class="specs">SUV | Auto | Petrol</p>
+          <p class="price">₹5000 / Day</p>
+          <button class="btn-neon">Book Now</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="car-card" data-transmission="Auto" data-fuel="Petrol" data-price="8000">
+          <img src="https://via.placeholder.com/300x150?text=BMW+M3" alt="BMW M3">
+          <h3>BMW M3</h3>
+          <p class="specs">Luxury | Auto | Petrol</p>
+          <p class="price">₹8000 / Day</p>
+          <button class="btn-neon">Book Now</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="car-card" data-transmission="Manual" data-fuel="EV" data-price="3000">
+          <img src="https://via.placeholder.com/300x150?text=Tata+Tigor+EV" alt="Tata Tigor EV">
+          <h3>Tata Tigor EV</h3>
+          <p class="specs">Sedan | Manual | EV</p>
+          <p class="price">₹3000 / Day</p>
+          <button class="btn-neon">Book Now</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="car-card" data-transmission="Manual" data-fuel="Diesel" data-price="4000">
+          <img src="https://via.placeholder.com/300x150?text=Mahindra+Thar" alt="Mahindra Thar">
+          <h3>Mahindra Thar</h3>
+          <p class="specs">SUV | Manual | Diesel</p>
+          <p class="price">₹4000 / Day</p>
+          <button class="btn-neon">Book Now</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+### 2. CSS (style.css) - Neon Dark Theme
+```css
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-card: #161616;
+  --bg-input: #1A1A1A;
+  --neon-orange: #FF5E00;
+  --text-white: #FFFFFF;
+  --text-grey: #A0A0A0;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Quick Search Bar */
+.quick-search-container {
+  background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  background: rgba(22, 22, 22, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.input-box {
+  flex: 1;
+  min-width: 180px;
+  text-align: left;
+}
+
+.input-box label {
+  font-size: 0.8rem;
+  color: var(--text-grey);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: white;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.input-box input:focus {
+  outline: none;
+  border-color: var(--neon-orange);
+  box-shadow: 0 0 10px rgba(255, 94, 0, 0.3);
+}
+
+.btn-neon {
+  background: var(--neon-orange);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: flex-end;
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 20px rgba(255, 94, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Main Layout */
+.listing-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sidebar Filters */
+.filters-sidebar {
+  width: 250px;
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  height: fit-content;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+}
+
+.filter-group h4 {
+  color: var(--neon-orange);
+  margin-bottom: 10px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-grey);
+  cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+  accent-color: var(--neon-orange);
+  margin-right: 8px;
+}
+
+.filter-group input[type="range"] {
+  width: 100%;
+  accent-color: var(--neon-orange);
+}
+
+/* Car Grid */
+.car-listings { flex: 1; }
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.car-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.car-card:hover {
+  border-color: var(--neon-orange);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 94, 0, 0.1);
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.car-card h3 { margin: 10px 0; }
+.specs { font-size: 0.8rem; color: var(--text-grey); }
+.price { color: var(--neon-orange); font-weight: bold; font-size: 1.2rem; }
+```
+
+---
+
+### 3. JavaScript (script.js) - Smart Logic
+यह कोड 3 काम करेगा:
+1. **Date Validation** (तारीख सही है या नहीं)
+2. **Live Filtering** (चेकबॉक्स पर क्लिक करते ही कारें छन जाएंगी)
+3. **Price Slider** (प्राइस बदलते ही कारें छन जाएंगी)
+
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+  const searchBtn = document.getElementById('searchBtn');
+  const pickupDate = document.getElementById('pickupDate');
+  const returnDate = document.getElementById('returnDate');
+  
+  const checkboxes = document.querySelectorAll('.filter-cb');
+  const priceRange = document.getElementById('priceRange');
+  const priceValue = document.getElementById('priceValue');
+  const carCards = document.querySelectorAll('.car-card');
+  const resultCount = document.getElementById('result-count');
+
+  // 1. DATE VALIDATION (तारीख की जांच)
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if(pickupDate.value && returnDate.value) {
+      const pickup = new Date(pickupDate.value);
+      const returnD = new Date(returnDate.value);
+
+      if (returnD <= pickup) {
+        alert("⚠️ Return Date must be after Pick-up Date!");
+        return;
+      }
+      alert("✅ Searching cars for your dates...");
+    } else {
+      alert("⚠️ Please select both Pick-up and Return dates.");
+    }
+  });
+
+  // 2. LIVE FILTERING LOGIC
+  priceRange.addEventListener('input', () => {
+    priceValue.textContent = priceRange.value;
+    filterCars();
+  });
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', filterCars);
+  });
+
+  function filterCars() {
+    // Selected Filters निकालें
+    const selectedFilters = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
+    const maxPrice = parseInt(priceRange.value);
+    let visibleCars = 0;
+
+    carCards.forEach(card => {
+      const carTrans = card.dataset.transmission;
+      const carFuel = card.dataset.fuel;
+      const carPrice = parseInt(card.dataset.price);
+
+      // चेक करें कि कार फिल्टर से मैच करती है या नहीं
+      const matchesTrans = selectedFilters.includes(carTrans);
+      const matchesFuel = selectedFilters.includes(carFuel);
+      const matchesPrice = carPrice <= maxPrice;
+
+      if (matchesTrans && matchesFuel && matchesPrice) {
+        card.style.display = 'block';
+        card.style.animation = 'fadeIn 0.4s ease'; // छोटा सा एनिमेशन
+        visibleCars++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Result Count अपडेट करें
+    if(visibleCars === 0){
+      resultCount.textContent = "No cars found. Try changing filters.";
+      resultCount.style.color = "#FF5E00";
+    } else {
+      resultCount.textContent = `Showing ${visibleCars} cars`;
+      resultCount.style.color = "var(--text-grey)";
+    }
+  }
+});
+```
+
+---
+
+### 💡 इस कोड की खास बातें:
+1. **Live Update:** जैसे ही आप "Auto" या "Manual" का चेकबॉक्स हटाएंगे, वैसे ही कारें गायब हो जाएंगी (बिना पेज रीलोड हुए)।
+2. **Price Slider:** स्लाइडर को खींचते ही महंगी कारें अपने आप छन जाएंगी।
+3. **Date Alert:** अगर यूजर रिटर्न डेट पिक-अप डेट से पहले डालता है, तो उसे तुरंत अलर्ट मिलेगा।
+4. **Neon Theme:** बटन और फोकस इफेक्ट पूरी तरह से आपके "Midnight Neon" थीम से मैच करते हैं।
+
+अगर आप चाहें तो मैं इसमें **"Location Auto-Suggestion"** (जैसे Delhi Airport, Mumbai Railway Station) भी जोड़ सकता हूँ, जिससे यूजर को टाइप करने में आसानी होगी। बताइए! 🚗⚡
+बहुत ही शानदार फीचर! **फ्लेक्सिबल बुकिंग (Flexible Booking)** किसी भी कार रेंटल वेबसाइट के लिए बहुत ज़रूरी है। कई बार यूज़र को तुरंत कार चाहिए होती है (Instant Booking), तो कई बार वो अपनी यात्रा की तैयारी पहले से करना चाहता है (Scheduled Booking)।
+
+आपकी **RajajiCar** वेबसाइट के लिए मैंने एक ऐसा बुकिंग फॉर्म डिज़ाइन किया है जिसमें यूज़र **"Book Now"** (अभी बुक करें) और **"Schedule for Later"** (बाद के लिए शेड्यूल करें) दोनों में से चुन सकता है। 
+
+यहाँ इसका पूरा **HTML, CSS और JavaScript कोड** है:
+
+---
+
+### 1. HTML (बुकिंग फॉर्म स्ट्रक्चर)
+इसमें सबसे ऊपर दो टैब (Tabs) हैं—एक "Book Now" के लिए और दूसरा "Schedule" के लिए। जब आप टैब बदलेंगे, तो फॉर्म का डेटा अपने आप बदल जाएगा।
+
+```html
+<div class="booking-container">
+  <h2>Book Your RajajiCar</h2>
+  
+  <!-- Toggle Tabs (Book Now vs Schedule) -->
+  <div class="booking-tabs">
+    <button class="tab-btn active" id="tab-now" onclick="switchTab('now')">
+      ⚡ Book Now
+    </button>
+    <button class="tab-btn" id="tab-schedule" onclick="switchTab('schedule')">
+      📅 Schedule for Later
+    </button>
+  </div>
+
+  <!-- Booking Form -->
+  <form id="bookingForm">
+    
+    <!-- Name & Phone (Common) -->
+    <div class="form-row">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+      </div>
+    </div>
+
+    <!-- Pick-up & Drop-off (Common) -->
+    <div class="form-row">
+      <div class="form-group">
+        <label>📍 Pick-up Location</label>
+        <input type="text" placeholder="Airport, Hotel, or City" required>
+      </div>
+      <div class="form-group">
+        <label>📍 Drop-off Location</label>
+        <input type="text" placeholder="Where to drop?" required>
+      </div>
+    </div>
+
+    <!-- DATE & TIME SECTION (यहाँ बदलाव होगा) -->
+    <div id="datetime-section">
+      <!-- Book Now View (Default) -->
+      <div id="view-now">
+        <div class="alert-box instant">
+          ⚡ Your car will be ready within 30-60 minutes.
+        </div>
+        <!-- Hidden fields to capture current time -->
+        <input type="hidden" id="bookNowTime" value="">
+      </div>
+
+      <!-- Schedule View (Initially Hidden) -->
+      <div id="view-schedule" style="display: none;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Pick-up Date</label>
+            <input type="date" id="pickupDate" required>
+          </div>
+          <div class="form-group">
+            <label>Pick-up Time</label>
+            <input type="time" id="pickupTime" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Return Date</label>
+            <input type="date" id="returnDate" required>
+          </div>
+          <div class="form-group">
+            <label>Return Time</label>
+            <input type="time" id="returnTime" required>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn-neon submit-btn" id="submitBtn">
+      Confirm Instant Booking
+    </button>
+
+  </form>
+</div>
+```
+
+---
+
+### 2. CSS (Neon Dark Theme)
+यहाँ बटन और टैब के लिए स्टाइलिंग है। जो टैब एक्टिव होगा, उस पर नियॉन ऑरेंज का ग्लो आएगा।
+
+```css
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-card: #161616;
+  --bg-input: #1A1A1A;
+  --neon-orange: #FF5E00;
+  --text-white: #FFFFFF;
+  --text-grey: #A0A0A0;
+  --border-color: #333333;
+}
+
+.booking-container {
+  background: var(--bg-card);
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.booking-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* TABS STYLE */
+.booking-tabs {
+  display: flex;
+  background: var(--bg-input);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-grey);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: var(--neon-orange);
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 94, 0, 0.4);
+}
+
+/* FORM INPUTS */
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-grey);
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--neon-orange);
+  box-shadow: 0 0 8px rgba(255, 94, 0, 0.2);
+}
+
+/* ALERT BOX (Instant Message) */
+.alert-box {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.alert-box.instant {
+  background: rgba(255, 94, 0, 0.1);
+  border-left: 4px solid var(--neon-orange);
+  color: var(--neon-orange);
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+```
+
+---
+
+### 3. JavaScript (स्मार्ट स्विचिंग लॉजिक)
+यह कोड टैब बदलने पर फॉर्म को बदल देगा और तारीख की जाँच भी करेगा (जैसे कोई पुरानी तारीख न डाल सके)।
+
+```javascript
+// 1. Tab Switching Logic
+function switchTab(type) {
+  const tabNow = document.getElementById('tab-now');
+  const tabSchedule = document.getElementById('tab-schedule');
+  const viewNow = document.getElementById('view-now');
+  const viewSchedule = document.getElementById('view-schedule');
+  const submitBtn = document.getElementById('submitBtn');
+
+  // Set minimum date to today for schedule
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('pickupDate').setAttribute('min', today);
+  document.getElementById('returnDate').setAttribute('min', today);
+
+  if (type === 'now') {
+    // Activate Book Now Tab
+    tabNow.classList.add('active');
+    tabSchedule.classList.remove('active');
+    
+    // Show Now View, Hide Schedule View
+    viewNow.style.display = 'block';
+    viewSchedule.style.display = 'none';
+    
+    // Change Button Text
+    submitBtn.textContent = "Confirm Instant Booking";
+  } 
+  else {
+    // Activate Schedule Tab
+    tabSchedule.classList.add('active');
+    tabNow.classList.remove('active');
+    
+    // Hide Now View, Show Schedule View
+    viewNow.style.display = 'none';
+    viewSchedule.style.display = 'block';
+    
+    // Change Button Text
+    submitBtn.textContent = "Schedule Booking";
+  }
+}
+
+// 2. Form Submit & Date Validation
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Stop page reload
+  
+  const isSchedule = document.getElementById('tab-schedule').classList.contains('active');
+  
+  if (isSchedule) {
+    const pickupDate = new Date(document.getElementById('pickupDate').value);
+    const returnDate = new Date(document.getElementById('returnDate').value);
+    const now = new Date();
+
+    // Check if pickup date is in the past
+    if (pickupDate < now.setHours(0,0,0,0)) {
+      alert("⚠️ Pick-up date cannot be in the past!");
+      return;
+    }
+
+    // Check if return is before pickup
+    if (returnDate <= pickupDate) {
+      alert("⚠️ Return date must be after Pick-up date!");
+      return;
+    }
+
+    alert("✅ Your booking has been scheduled successfully!");
+  } 
+  else {
+    // Instant Booking Logic
+    const now = new Date();
+    const instantTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    alert(`⚡ Instant Booking Confirmed for Today at ${instantTime}! Our driver will contact you shortly.`);
+  }
+});
+```
+
+---
+
+### 💡 इस डिज़ाइन की खास बातें:
+
+1. **Instant Booking (Book Now):** जब यूजर इस टैब पर होता है, तो उसे तारीख डालने की जरूरत नहीं पड़ती। सिस्टम खुद ही मान लेता है कि कार **आज (Today)** और **अभी (Now)** चाहिए।
+2. **Scheduled Booking:** जैसे ही यूजर "Schedule" पर क्लिक करता है, उसके सामने तारीख और समय (Date & Time) के बॉक्स खुल जाते हैं।
+3. **Date Validation:** अगर यूजर गलती से कल से पहले की तारीख (Past Date) डालता है, तो वेबसाइट उसे एरर दिखा देगी।
+4. **Dynamic Button:** "Book Now" में बटन का नाम **"Confirm Instant Booking"** हो जाता है, और "Schedule" में **"Schedule Booking"** हो जाता है, जिससे यूजर को साफ समझ आता है कि वो क्या कर रहा है।
+
+क्या आप चाहते हैं कि मैं इसमें **"Payment Option"** (जैसे Pay Now या Pay on Delivery) भी जोड़ दूँ? 🚗⚡
+
+बहुत शानदार फीचर! **"फेयर एस्टीमेटर" (Fare Estimator)** यूजर के भरोसे (Trust) को बढ़ाता है। जब यूजर को बुकिंग से पहले ही पता होगा कि उसे कुल कितना पैसा देना है (बिना किसी छिपे हुए चार्ज के), तो वो जल्दी बुकिंग करेगा। 
+
+आपकी **RajajiCar** के नियॉन डार्क थीम के हिसाब से मैंने यहाँ एक **Live Fare Estimator** का पूरा कोड (HTML + CSS + JS) तैयार किया है। इसमें यूजर जैसे ही दूरी (Distance) या दिन (Days) डालेगा, वैसे ही टोटल किराया (Taxes सहित) अपने आप कैलकुलेट हो जाएगा।
+
+---
+
+### 1. HTML (बुकिंग फॉर्म और रसीद का स्ट्रक्चर)
+यहाँ फॉर्म के साथ-साथ एक "Price Summary" (रसीद) बॉक्स है।
+
+```html
+<div class="booking-wrapper">
+  
+  <!-- LEFT SIDE: Booking Form -->
+  <div class="booking-form-section">
+    <h2>Confirm Your Booking</h2>
+    
+    <div class="form-group">
+      <label>Pick-up Location</label>
+      <input type="text" placeholder="Enter Pick-up City" id="pickupLoc">
+    </div>
+
+    <div class="form-group">
+      <label>Drop-off Location</label>
+      <input type="text" placeholder="Enter Drop-off City" id="dropoffLoc">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Estimated Distance (in KM)</label>
+        <!-- Real website में इसे Google Maps API से ऑटोमैटिक निकालेंगे, यहाँ डेमो के लिए इनपुट है -->
+        <input type="number" id="distanceInput" value="150" min="1">
+      </div>
+      <div class="form-group">
+        <label>Number of Days</label>
+        <input type="number" id="daysInput" value="2" min="1">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Select Car Price (Per Day)</label>
+      <select id="carPriceSelect">
+        <option value="3000">Tata Tigor EV - ₹3000/day</option>
+        <option value="5000" selected>Toyota Fortuner - ₹5000/day</option>
+        <option value="8000">BMW M3 - ₹8000/day</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE: Fare Estimator (Live Receipt) -->
+  <div class="fare-estimator-section">
+    <h3>Fare Estimate</h3>
+    <p class="estimate-note">Prices are inclusive of all taxes</p>
+
+    <div class="receipt-item">
+      <span>Car Rent (Base)</span>
+      <span>₹<span id="baseRent">10000</span></span>
+    </div>
+
+    <div class="receipt-item">
+      <span>Distance Charge (₹10/km)</span>
+      <span>₹<span id="distanceCharge">1500</span></span>
+    </div>
+
+    <div class="receipt-item">
+      <span>Driver Allowance (₹500/day)</span>
+      <span>₹<span id="driverCharge">1000</span></span>
+    </div>
+
+    <div class="receipt-item">
+      <span>GST & Taxes (18%)</span>
+      <span>₹<span id="taxAmount">2250</span></span>
+    </div>
+
+    <hr class="receipt-divider">
+
+    <div class="receipt-total">
+      <span>Total Payable</span>
+      <span class="total-amount">₹<span id="totalAmount">14750</span></span>
+    </div>
+
+    <button class="btn-neon confirm-btn">Proceed to Pay</button>
+  </div>
+
+</div>
+```
+
+---
+
+### 2. CSS (Neon Dark Theme)
+यहाँ रसीद (Receipt) को एक प्रीमियम और साफ-सुथरा लुक दिया गया है।
+
+```css
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-card: #161616;
+  --bg-input: #1A1A1A;
+  --neon-orange: #FF5E00;
+  --text-white: #FFFFFF;
+  --text-grey: #A0A0A0;
+  --border-color: #333333;
+}
+
+.booking-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Form Section */
+.booking-form-section {
+  flex: 1;
+  min-width: 300px;
+  background: var(--bg-card);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.booking-form-section h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-grey);
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: white;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: var(--neon-orange);
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+/* Fare Estimator (Right Side) */
+.fare-estimator-section {
+  flex: 1;
+  min-width: 300px;
+  background: linear-gradient(145deg, #161616, #0f0f0f);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--neon-orange);
+  box-shadow: 0 0 20px rgba(255, 94, 0, 0.1);
+  height: fit-content;
+}
+
+.fare-estimator-section h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: var(--neon-orange);
+}
+
+.estimate-note {
+  font-size: 0.75rem;
+  color: var(--text-grey);
+  margin-bottom: 20px;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: var(--text-grey);
+}
+
+.receipt-item span:last-child {
+  color: var(--text-white);
+  font-weight: 500;
+}
+
+.receipt-divider {
+  border: none;
+  border-top: 1px dashed var(--border-color);
+  margin: 20px 0;
+}
+
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.total-amount {
+  color: var(--neon-orange);
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 0 10px rgba(255, 94, 0, 0.4);
+}
+
+.btn-neon {
+  width: 100%;
+  background: var(--neon-orange);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 20px rgba(255, 94, 0, 0.6);
+}
+```
+
+---
+
+### 3. JavaScript (Live Calculation Logic)
+यह कोड हर बार इनपुट बदलने पर किराए को फिर से कैलकुलेट करेगा।
+
+```javascript
+// सभी इनपुट्स को सेलेक्ट करें
+const distanceInput = document.getElementById('distanceInput');
+const daysInput = document.getElementById('daysInput');
+const carPriceSelect = document.getElementById('carPriceSelect');
+
+// रसीद वाले हिस्से को सेलेक्ट करें
+const baseRentEl = document.getElementById('baseRent');
+const distanceChargeEl = document.getElementById('distanceCharge');
+const driverChargeEl = document.getElementById('driverCharge');
+const taxAmountEl = document.getElementById('taxAmount');
+const totalAmountEl = document.getElementById('totalAmount');
+
+// कैलकुलेशन फंक्शन
+function calculateFare() {
+  // 1. वैल्यूज़ निकालें (अगर खाली हो तो 0 मानें)
+  const days = parseFloat(daysInput.value) || 1;
+  const distance = parseFloat(distanceInput.value) || 0;
+  const pricePerDay = parseFloat(carPriceSelect.value) || 0;
+
+  // 2. कैलकुलेशन के नियम (Rules)
+  const baseRent = pricePerDay * days;          // कार का किराया
+  const distanceRate = 10;                      // ₹10 प्रति किमी
+  const distanceCharge = distance * distanceRate; // दूरी का चार्ज
+  const driverAllowance = 500 * days;           // ₹500 प्रति दिन ड्राइवर भत्ता
+  
+  // 3. सबटोटल और टैक्स
+  const subTotal = baseRent + distanceCharge + driverAllowance;
+  const taxRate = 0.18; // 18% GST
+  const taxAmount = subTotal * taxRate;
+  
+  // 4. ग्रैंड टोटल
+  const grandTotal = subTotal + taxAmount;
+
+  // 5. HTML में वैल्यूज़ अपडेट करें (Comma format के साथ)
+  baseRentEl.textContent = baseRent.toLocaleString('en-IN');
+  distanceChargeEl.textContent = distanceCharge.toLocaleString('en-IN');
+  driverChargeEl.textContent = driverAllowance.toLocaleString('en-IN');
+  taxAmountEl.textContent = Math.round(taxAmount).toLocaleString('en-IN');
+  totalAmountEl.textContent = Math.round(grandTotal).toLocaleString('en-IN');
+}
+
+// जब भी यूजर कोई इनपुट बदले, तो कैलकुलेशन फंक्शन चलाएं
+distanceInput.addEventListener('input', calculateFare);
+daysInput.addEventListener('input', calculateFare);
+carPriceSelect.addEventListener('change', calculateFare);
+
+// पेज लोड होते ही पहली बार कैलकुलेशन करें
+calculateFare();
+```
+
+---
+
+### 💡 इसे और स्मार्ट कैसे बनाएं? (Real-world Integration)
+
+ऊपर दिए गए कोड में यूजर को दूरी (Distance) खुद डालनी पड़ रही है। लेकिन असली वेबसाइट में इसे ऑटोमैटिक किया जा सकता है:
+
+1. **Google Maps API Integration:** जब यूजर "Pick-up" और "Drop-off" लोकेशन डालेगा, तो Google Maps API से हम अपने आप दोनों शहरों के बीच की दूरी (Distance in KM) निकाल सकते हैं और उसे `distanceInput` में भर सकते हैं।
+2. **Toll Tax & State Tax:** अगर यूजर दूसरे राज्य में जा रहा है, तो "Toll Tax" और "State Permit" का चार्ज भी रसीद में जोड़ा जा सकता है।
+3. **Discount Coupon:** रसीद में एक "Apply Coupon" बॉक्स जोड़ें, जिससे यूजर कोड डालकर कुछ छूट पा सके।
+4. **Security Deposit:** कुछ कंपनियां बुकिंग के समय एक छोटी सी "Refundable Deposit" (जैसे ₹2000) भी लेती हैं, जो बाद में वापस मिल जाती है।
+
+क्या आप चाहते हैं कि मैं इसमें **"Payment Gateway"** (Razorpay/UPI) का डमी डिज़ाइन भी जोड़ दूँ? या फिर **Google Maps API** से दूरी कैसे निकालते हैं, उसका कोड दिखाऊँ? 🚗💰
+बहुत ही ज़बरदस्त फीचर! **लाइव राइड ट्रैकिंग (Live Tracking)** किसी भी प्रीमियम कार रेंटल वेबसाइट का सबसे आकर्षक हिस्सा होता है। जब यूज़र को बुकिंग के बाद दिखता है कि उसकी कार कहाँ है और कितने मिनट में पहुँचेगी, तो उसका भरोसा बढ़ जाता है।
+
+आपकी **RajajiCar** के नियॉन डार्क थीम के हिसाब से मैंने यहाँ **Leaflet.js** (जो 100% फ्री है और Google Maps की तरह API Key नहीं मांगता) का उपयोग करके लाइव ट्रैकिंग का पूरा कोड तैयार किया है।
+
+---
+
+### 1. HTML (Live Tracking UI)
+इसमें मैप के साथ-साथ ड्राइवर की जानकारी (Driver Details) और ETA (कितनी देर में पहुँचेगी) का डिज़ाइन है।
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RajajiCar - Live Tracking</title>
+  
+  <!-- Leaflet.js CSS (मैप के लिए) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="tracking-container">
+    
+    <!-- LEFT SIDE: Map -->
+    <div class="map-section">
+      <div id="map"></div>
+    </div>
+
+    <!-- RIGHT SIDE: Ride Details -->
+    <div class="ride-details-section">
+      <h2>Live Ride Status</h2>
+      
+      <!-- ETA Box -->
+      <div class="eta-box">
+        <span class="eta-label">Arriving in</span>
+        <span class="eta-time" id="etaTime">12 mins</span>
+      </div>
+
+      <!-- Driver Info Card -->
+      <div class="driver-card">
+        <img src="https://via.placeholder.com/60x60?text=Driver" alt="Driver" class="driver-img">
+        <div class="driver-info">
+          <h4>Rajesh Kumar</h4>
+          <p>⭐ 4.9 | Toyota Fortuner (DL 01 AB 1234)</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button class="btn-call">📞 Call Driver</button>
+        <button class="btn-cancel">❌ Cancel Ride</button>
+      </div>
+
+      <!-- Ride Progress (Timeline) -->
+      <div class="ride-progress">
+        <div class="progress-step completed">
+          <div class="dot"></div>
+          <span>Booking Confirmed</span>
+        </div>
+        <div class="progress-step active">
+          <div class="dot"></div>
+          <span>Driver on the way</span>
+        </div>
+        <div class="progress-step">
+          <div class="dot"></div>
+          <span>Ride Started</span>
+        </div>
+        <div class="progress-step">
+          <div class="dot"></div>
+          <span>Destination Reached</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Leaflet.js Script -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+### 2. CSS (style.css) - Neon Dark Theme
+Leaflet के डिफ़ॉल्ट मैप को डार्क थीम में बदलने के लिए हम एक स्पेशल CSS फ़िल्टर का इस्तेमाल करेंगे (ताकि मैप भी नियॉन लुक दे)।
+
+```css
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-card: #161616;
+  --neon-orange: #FF5E00;
+  --text-white: #FFFFFF;
+  --text-grey: #A0A0A0;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.tracking-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80vh; /* स्क्रीन के हिसाब से */
+}
+
+/* Map Section */
+.map-section {
+  flex: 2;
+  min-width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  /* Leaflet के मैप को डार्क थीम देने का जादू */
+  filter: invert(100%) hue-rotate(180deg) brightness(90%) contrast(90%);
+}
+
+/* Ride Details Section */
+.ride-details-section {
+  flex: 1;
+  min-width: 300px;
+  background: var(--bg-card);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ride-details-section h2 {
+  margin-top: 0;
+}
+
+/* ETA Box */
+.eta-box {
+  background: rgba(255, 94, 0, 0.1);
+  border-left: 4px solid var(--neon-orange);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eta-label { color: var(--text-grey); font-size: 0.9rem; }
+.eta-time { 
+  color: var(--neon-orange); 
+  font-size: 1.4rem; 
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 94, 0, 0.4);
+}
+
+/* Driver Card */
+.driver-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1A1A1A;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.driver-img {
+  border-radius: 50%;
+  border: 2px solid var(--neon-orange);
+}
+
+.driver-info h4 { margin: 0 0 5px 0; color: white; }
+.driver-info p { margin: 0; font-size: 0.85rem; color: var(--text-grey); }
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-call, .btn-cancel {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-call {
+  background: var(--neon-orange);
+  color: white;
+}
+
+.btn-call:hover {
+  box-shadow: 0 0 15px rgba(255, 94, 0, 0.6);
+}
+
+.btn-cancel {
+  background: transparent;
+  color: #ff4444;
+  border: 1px solid #ff4444;
+}
+
+.btn-cancel:hover {
+  background: rgba(255, 68, 68, 0.1);
+}
+
+/* Ride Progress Timeline */
+.ride-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-grey);
+  font-size: 0.9rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--border-color);
+  position: relative;
+}
+
+/* Connecting Line */
+.progress-step:not(:last-child) .dot::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  width: 2px;
+  height: 25px;
+  background: var(--border-color);
+}
+
+/* Active & Completed Steps */
+.progress-step.completed { color: var(--text-white); }
+.progress-step.completed .dot { background: var(--neon-orange); }
+
+.progress-step.active { color: var(--neon-orange); font-weight: bold; }
+.progress-step.active .dot { 
+  background: var(--neon-orange); 
+  box-shadow: 0 0 10px var(--neon-orange); 
+}
+```
+
+---
+
+### 3. JavaScript (script.js) - Leaflet Live Logic
+यह स्क्रिप्ट मैप बनाएगी, ड्राइवर की लोकेशन दिखाएगी और एक एनिमेशन के साथ कार को रास्ते पर चलाएगी।
+
+```javascript
+// 1. मैप इनिशियलाइज़ करें (Delhi को सेंटर मानकर)
+const map = L.map('map').setView([28.6139, 77.2090], 13);
+
+// 2. डार्क थीम वाला मैप टाइल लोड करें (CartoDB Dark Matter)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; OpenStreetMap &copy; CartoDB',
+  subdomains: 'abcd',
+  maxZoom: 20
+}).addTo(map);
+
+// 3. कस्टम आइकॉन्स (यूजर और कार के लिए)
+const userIcon = L.divIcon({
+  className: 'custom-user-icon',
+  html: `<div style="background:#FF5E00; width:15px; height:15px; border-radius:50%; border:3px solid white; box-shadow: 0 0 10px #FF5E00;"></div>`,
+  iconSize: [20, 20]
+});
+
+const carIcon = L.divIcon({
+  className: 'custom-car-icon',
+  html: `<div style="font-size: 24px; filter: drop-shadow(0 0 5px #FF5E00);">🚗</div>`,
+  iconSize: [30, 30]
+});
+
+// 4. शुरुआती लोकेशन (User और Driver)
+const userLocation = [28.6139, 77.2090]; // इंडिया गेट
+const driverStart = [28.6300, 77.2200];  // ड्राइवर की शुरुआती लोकेशन
+
+// मार्कर लगाएं
+L.marker(userLocation, {icon: userIcon}).addTo(map).bindPopup("Your Location");
+const driverMarker = L.marker(driverStart, {icon: carIcon}).addTo(map).bindPopup("Driver");
+
+// 5. दोनों के बीच एक लाइन (Route) खींचें
+const routeLine = L.polyline([driverStart, userLocation], {
+  color: '#FF5E00',
+  weight: 4,
+  opacity: 0.7,
+  dashArray: '10, 10' // डैश लाइन
+}).addTo(map);
+
+// मैप को इस तरह फिट करें कि दोनों दिख जाएं
+map.fitBounds(routeLine.getBounds(), { padding: [50, 50] });
+
+
+// 6. LIVE ANIMATION (ड्राइवर को यूजर की तरफ चलाना)
+let step = 0;
+const totalSteps = 100;
+const latStep = (userLocation[0] - driverStart[0]) / totalSteps;
+const lngStep = (userLocation[1] - driverStart[1]) / totalSteps;
+let etaSeconds = 12 * 60; // 12 मिनट (सेकंड्स में)
+
+function moveDriver() {
+  if (step < totalSteps) {
+    step++;
+    
+    // ड्राइवर की नई लोकेशन
+    const newLat = driverStart[0] + (latStep * step);
+    const newLng = driverStart[1] + (lngStep * step);
+    driverMarker.setLatLng([newLat, newLng]);
+
+    // ETA टाइमर घटाएं
+    etaSeconds -= (12 * 60) / totalSteps;
+    const mins = Math.floor(etaSeconds / 60);
+    const secs = Math.floor(etaSeconds % 60);
+    document.getElementById('etaTime').textContent = `${mins}m ${secs}s`;
+
+    // अगर ड्राइवर पहुँच गया
+    if (step === totalSteps) {
+      document.getElementById('etaTime').textContent = "Arrived! 📍";
+      driverMarker.bindPopup("Driver has Arrived!").openPopup();
+      document.querySelector('.progress-step.active').classList.remove('active');
+      document.querySelectorAll('.progress-step')[2].classList.add('active'); // Ride Started
+    } else {
+      // हर 1 सेकंड बाद लोकेशन अपडेट करें
+      setTimeout(moveDriver, 1000); 
+    }
+  }
+}
+
+// एनिमेशन शुरू करें (पेज लोड होने के 2 सेकंड बाद)
+setTimeout(moveDriver, 2000);
+```
+
+---
+
+### 💡 यह कैसे काम करता है? (Real-world Scenario)
+
+1. **Leaflet.js का जादू:** ऊपर दिए गए कोड को चलाने पर आपको एक डार्क मैप दिखेगा (जो Google Maps जैसा ही है, लेकिन मुफ्त है)। इसमें एक ऑरेंज डॉट (User) और एक कार का इमोजी (Driver) दिखेगा।
+2. **Live Animation:** जब आप पेज खोलेंगे, तो कार का इमोजी धीरे-धीरे यूजर की तरफ बढ़ता हुआ दिखेगा (जैसे असली ड्राइवर आ रहा हो)। साथ ही "12 mins" वाला ETA टाइमर भी घटता जाएगा।
+3. **Progress Bar:** दाईं तरफ जो टाइमलाइन है, वो बुकिंग के स्टेटस को दिखाती है (Booking Confirmed -> Driver on the way -> Ride Started)।
+4. **Real Database Integration:** असली वेबसाइट में, हम **Firebase** या **Socket.io** का इस्तेमाल करते हैं। ड्राइवर के मोबाइल ऐप से उसकी GPS लोकेशन हर 5 सेकंड में डेटाबेस में भेजी जाती है, और वेबसाइट उसे उठाकर इस मैप पर `driverMarker.setLatLng()` के जरिए अपडेट कर देती है।
+
+क्या आप चाहते हैं कि मैं **Socket.io** का इस्तेमाल करके इसका एक छोटा सा "Live Server" वाला उदाहरण भी दिखाऊँ, ताकि आपके डेवलपर को समझ आए कि असली लोकेशन कैसे सिंक होगी? 🚗📍
+यह बहुत ही शानदार आइडिया है! जब यूज़र बुकिंग कन्फर्म करता है, तो एक **स्मूथ और प्रीमियम एनीमेशन** उसके दिल को छू लेता है। इससे यूज़र को लगता है कि उसका पैसा और समय सही जगह लगा है।
+
+आपकी **RajajiCar** (Neon Dark Theme) के लिए मैंने यहाँ **3 अलग-अलग एनिमेटेड बुकिंग स्टेटस** के कोड तैयार किए हैं। आप अपनी पसंद का कोई भी चुन सकते हैं:
+
+---
+
+### 🎬 विकल्प 1: "Speed & Tick" (कार चलना और टिक मार्क होना)
+यह सबसे बेहतरीन है। जब बुकिंग कन्फर्म हो, तो पहले एक कार (या आपकी GIF) दाएं से बाएं स्पीड से चले, और फिर एक नियॉन हरा टिक (✔) बन जाए।
+
+**HTML:**
+```html
+<div class="status-overlay" id="successOverlay">
+  <div class="animation-container">
+    <!-- कार वाला हिस्सा -->
+    <div class="car-animation">
+      <span class="car-emoji">🚗</span>
+      <div class="speed-lines">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    
+    <!-- टिक मार्क वाला हिस्सा -->
+    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+      <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+      <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+    </svg>
+    
+    <h2>Booking Confirmed!</h2>
+    <p>Your RajajiCar is on the way.</p>
+    <button class="btn-neon" onclick="closeOverlay()">Track My Ride</button>
+  </div>
+</div>
+```
+
+**CSS (एनिमेशन):**
+```css
+/* Overlay Background */
+.status-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.status-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.animation-container {
+  text-align: center;
+  color: white;
+}
+
+/* कार का एनिमेशन */
+.car-animation {
+  position: relative;
+  font-size: 60px;
+  margin-bottom: 30px;
+  animation: driveIn 1.5s ease-out forwards;
+}
+
+@keyframes driveIn {
+  0% { transform: translateX(200px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* स्पीड लाइन्स (कार के पीछे) */
+.speed-lines span {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  width: 40px;
+  height: 3px;
+  background: #FF5E00;
+  border-radius: 2px;
+  opacity: 0;
+  animation: speedLine 1s ease-out forwards;
+}
+.speed-lines span:nth-child(1) { top: 30%; animation-delay: 0.1s; }
+.speed-lines span:nth-child(2) { top: 50%; animation-delay: 0.2s; width: 60px; }
+.speed-lines span:nth-child(3) { top: 70%; animation-delay: 0.3s; }
+
+@keyframes speedLine {
+  0% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(-100px); }
+}
+
+/* टिक मार्क (SVG) एनिमेशन */
+.checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 4;
+  stroke: #00FF7F; /* हरा रंग */
+  stroke-miterlimit: 10;
+  margin: 0 auto 20px;
+  box-shadow: inset 0 0 0 #00FF7F;
+  animation: fillCheck .4s ease-in-out .8s forwards, scaleCheck .3s ease-in-out 1.2s forwards;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  stroke: #00FF7F;
+  fill: none;
+  animation: strokeCircle .6s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: strokeCheck .3s cubic-bezier(0.65, 0, 0.45, 1) 1.4s forwards;
+}
+
+/* Keyframes for Tick */
+@keyframes strokeCircle { 100% { stroke-dashoffset: 0; } }
+@keyframes strokeCheck { 100% { stroke-dashoffset: 0; } }
+@keyframes fillCheck { 100% { box-shadow: inset 0 0 0 30px #00FF7F; } }
+@keyframes scaleCheck { 
+  0%, 100% { transform: none; } 
+  50% { transform: scale3d(1.1, 1.1, 1); } 
+}
+```
+
+**JavaScript (दिखाने और छिपाने के लिए):**
+```javascript
+function showSuccess() {
+  document.getElementById('successOverlay').classList.add('show');
+}
+
+function closeOverlay() {
+  document.getElementById('successOverlay').classList.remove('show');
+}
+```
+
+---
+
+### 🎬 विकल्प 2: "Neon Glow Pulse" (बुकिंग कन्फर्म होने पर लाइटिंग इफेक्ट)
+अगर आपको बहुत ज्यादा मूवमेंट नहीं चाहिए, तो यह क्लासी लुक देगा। एक नियॉन सर्कल बाहर की तरफ फैलता है (Pulse) और बीच में "Confirmed" लिखा आता है।
+
+**HTML:**
+```html
+<div class="status-overlay" id="successOverlay">
+  <div class="pulse-container">
+    <div class="pulse-circle"></div>
+    <div class="pulse-circle delay"></div>
+    <div class="pulse-icon">✔</div>
+    <h2 class="fade-in-text">Ride Confirmed!</h2>
+  </div>
+</div>
+```
+
+**CSS:**
+```css
+.pulse-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.pulse-circle {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  border: 2px solid #FF5E00;
+  animation: pulseAnim 2s infinite ease-out;
+}
+
+.pulse-circle.delay { animation-delay: 1s; }
+
+@keyframes pulseAnim {
+  0% { width: 80px; height: 80px; opacity: 1; }
+  100% { width: 300px; height: 300px; opacity: 0; border-width: 1px; }
+}
+
+.pulse-icon {
+  font-size: 50px;
+  color: #FF5E00;
+  z-index: 10;
+  text-shadow: 0 0 20px #FF5E00;
+  animation: scaleBounce 0.8s ease-out;
+}
+
+@keyframes scaleBounce {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.fade-in-text {
+  margin-top: 20px;
+  color: white;
+  opacity: 0;
+  animation: fadeInText 1s ease-in 0.5s forwards;
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; transform: translateY(-10px); }
+}
+```
+
+---
+
+### 🎬 विकल्प 3: "Road Map Fill" (प्रोग्रेस बार जिसमें कार चलती है)
+इसमें बुकिंग कन्फर्म होने पर एक सड़क (Road) जैसी प्रोग्रेस बार बनती है, और उसमें एक छोटी कार दौड़ती है, जब कार आखिर में पहुँचती है, तो "Success" लिखा आ जाता है।
+
+**HTML:**
+```html
+<div class="status-overlay" id="successOverlay">
+  <div class="road-container">
+    <h2>Confirming your Ride...</h2>
+    
+    <div class="road-track">
+      <div class="road-fill" id="roadFill"></div>
+      <div class="running-car" id="runningCar">🚗</div>
+    </div>
+    
+    <div class="success-message" id="successMsg">✅ Booking Successful!</div>
+  </div>
+</div>
+```
+
+**CSS:**
+```css
+.road-track {
+  width: 300px;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.road-fill {
+  width: 0%;
+  height: 100%;
+  background: #FF5E00;
+  border-radius: 5px;
+  transition: width 2s ease-in-out;
+}
+
+.running-car {
+  position: absolute;
+  top: -20px;
+  left: 0%;
+  font-size: 30px;
+  transition: left 2s ease-in-out;
+}
+
+/* जब सक्सेस हो */
+.road-fill.finished { width: 100%; }
+.running-car.finished { left: calc(100% - 30px); }
+
+.success-message {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+  color: #00FF7F;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.success-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+```
+
+**JavaScript (गाड़ी चलाने का लॉजिक):**
+```javascript
+function playRoadAnimation() {
+  const overlay = document.getElementById('successOverlay');
+  overlay.classList.add('show');
+  
+  // थोड़ी देर बाद कार चलाएं
+  setTimeout(() => {
+    document.getElementById('roadFill').classList.add('finished');
+    document.getElementById('runningCar').classList.add('finished');
+  }, 500);
+
+  // 2.5 सेकंड बाद सक्सेस मैसेज दिखाएं
+  setTimeout(() => {
+    document.getElementById('successMsg').classList.add('show');
+  }, 2600);
+}
+```
+
+---
+
+### 💡 यूज़र एक्सपीरियंस (UX) के लिए मेरा सुझाव:
+
+1. **Sound Effect:** जब बुकिंग कन्फर्म हो, तो एक हल्की सी "Vroom" (कार स्टार्ट होने की आवाज़) या "Ding" (टिक होने की आवाज़) जोड़ें। इससे अनुभव कई गुना बढ़ जाता है।
+2. **Haptic Feedback:** अगर यूज़र मोबाइल पर है, तो बुकिंग कन्फर्म होते ही फोन हल्का सा वाइब्रेट (Vibrate) हो।
+3. **Auto Redirect:** एनिमेशन खत्म होने के बाद (लगभग 3-4 सेकंड बाद) यूज़र को अपने आप **"Live Tracking Page"** पर भेज दें। इससे उसे लगेगा कि सिस्टम काम कर रहा है।
+
+आप इन तीनों में से किस एनिमेशन को अपनी वेबसाइट पर लगाना चाहेंगे? या मैं इसे **GIF/Video** की तरह आपके सामने प्रीव्यू (Preview) करके दिखाऊँ? 🚗✨
+यह तीनों फीचर्स **(Payment Gateway, Booking History + Invoice, और OTP Verification)** किसी भी प्रीमियम कार रेंटल वेबसाइट की **बैकबोन (रीढ़)** होते हैं। जब यूज़र को पता होता है कि उसका पैसा सुरक्षित है, उसे रसीद मिलेगी, और वो सही ड्राइवर के साथ बैठ रहा है—तो उसका भरोसा 100% हो जाता है।
+
+आपकी **RajajiCar** (Neon Dark Theme) के हिसाब से मैं इन तीनों का UI और कोड (Frontend Demo) यहाँ दे रहा हूँ।
+
+---
+
+## 1. मल्टी-पेमेंट गेटवे (Multi-Payment Gateway)
+
+यहाँ यूज़र को 3 विकल्प दिखेंगे: UPI (Google Pay, PhonePe), Credit/Debit Card, और Cash (Pay on Ride)। जब यूज़र किसी एक पर क्लिक करेगा, तो उसका रंग नियॉन ऑरेंज हो जाएगा।
+
+**HTML:**
+```html
+<div class="payment-section">
+  <h3>Select Payment Method</h3>
+  <div class="payment-options">
+    
+    <!-- Option 1: UPI -->
+    <label class="payment-card active">
+      <input type="radio" name="payment" value="upi" checked>
+      <div class="payment-icon">📱</div>
+      <div class="payment-details">
+        <strong>UPI</strong>
+        <span>Google Pay, PhonePe, Paytm</span>
+      </div>
+    </label>
+
+    <!-- Option 2: Card -->
+    <label class="payment-card">
+      <input type="radio" name="payment" value="card">
+      <div class="payment-icon">💳</div>
+      <div class="payment-details">
+        <strong>Credit / Debit Card</strong>
+        <span>Visa, Mastercard, RuPay</span>
+      </div>
+    </label>
+
+    <!-- Option 3: Cash -->
+    <label class="payment-card">
+      <input type="radio" name="payment" value="cash">
+      <div class="payment-icon">💵</div>
+      <div class="payment-details">
+        <strong>Pay on Ride</strong>
+        <span>Pay cash to the driver</span>
+      </div>
+    </label>
+
+  </div>
+  <button class="btn-neon">Pay & Confirm Booking</button>
+</div>
+```
+
+**CSS:**
+```css
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #161616;
+  border: 1px solid #333;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Active (Selected) State */
+.payment-card.active {
+  border-color: #FF5E00;
+  box-shadow: 0 0 15px rgba(255, 94, 0, 0.2);
+  background: #1A1A1A;
+}
+
+/* रेडियो बटन छिपाएं */
+.payment-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.payment-icon {
+  font-size: 24px;
+  background: #0A0A0A;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.payment-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-details strong {
+  color: white;
+  font-size: 1rem;
+}
+
+.payment-details span {
+  color: #A0A0A0;
+  font-size: 0.8rem;
+}
+```
+
+---
+
+## 2. बुकिंग हिस्ट्री और इनवॉइस (Booking History & Invoice)
+
+यूज़र को अपने पुराने राइड्स की लिस्ट दिखेगी, जहाँ हर बुकिंग के सामने **"Download PDF"** का बटन होगा।
+
+**HTML:**
+```html
+<div class="history-section">
+  <h2>Your Booking History</h2>
+  
+  <div class="history-card">
+    <div class="history-info">
+      <h4>Toyota Fortuner</h4>
+      <p><span>📅</span> 15 Oct 2024 | <span>📍</span> Delhi to Jaipur</p>
+    </div>
+    <div class="history-actions">
+      <span class="status completed">Completed</span>
+      <button class="btn-download" onclick="downloadInvoice()">📥 Invoice</button>
+    </div>
+  </div>
+
+  <div class="history-card">
+    <div class="history-info">
+      <h4>BMW M3</h4>
+      <p><span>📅</span> 02 Nov 2024 | <span>📍</span> Mumbai Local</p>
+    </div>
+    <div class="history-actions">
+      <span class="status upcoming">Upcoming</span>
+      <button class="btn-download">📥 Invoice</button>
+    </div>
+  </div>
+</div>
+```
+
+**CSS:**
+```css
+.history-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #161616;
+  border-left: 4px solid #FF5E00; /* Neon Accent */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.history-info h4 { margin: 0 0 5px 0; color: white; }
+.history-info p { margin: 0; color: #A0A0A0; font-size: 0.9rem; }
+
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status.completed { background: rgba(0, 255, 127, 0.1); color: #00FF7F; }
+.status.upcoming { background: rgba(255, 94, 0, 0.1); color: #FF5E00; }
+
+.btn-download {
+  background: transparent;
+  color: #FF5E00;
+  border: 1px solid #FF5E00;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-download:hover {
+  background: #FF5E00;
+  color: white;
+}
+```
+
+---
+
+## 3. OTP वेरिफिकेशन (Ride Start OTP)
+
+राइड शुरू होने से पहले ड्राइवर को OTP बताना होगा। इसे एक सुंदर 4-डिजिट बॉक्स की तरह डिज़ाइन किया जा सकता है।
+
+**HTML:**
+```html
+<div class="otp-container">
+  <h3>Start Your Ride</h3>
+  <p>Share this OTP with your driver to start the trip.</p>
+  
+  <div class="otp-boxes">
+    <input type="text" maxlength="1" class="otp-input" readonly value="4">
+    <input type="text" maxlength="1" class="otp-input" readonly value="8">
+    <input type="text" maxlength="1" class="otp-input" readonly value="2">
+    <input type="text" maxlength="1" class="otp-input" readonly value="9">
+  </div>
+  
+  <p class="otp-note">🔒 Do not share this OTP with anyone else.</p>
+</div>
+```
+
+**CSS:**
+```css
+.otp-container {
+  background: #0A0A0A;
+  border: 1px dashed #FF5E00;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.otp-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.otp-input {
+  width: 50px;
+  height: 60px;
+  font-size: 2rem;
+  text-align: center;
+  background: #161616;
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: #FF5E00; /* Neon Text */
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 0 10px rgba(255, 94, 0, 0.1);
+}
+
+.otp-note {
+  color: #A0A0A0;
+  font-size: 0.8rem;
+}
+```
+
+---
+
+### 💡 असली वेबसाइट में ये कैसे काम करता है? (Backend Logic)
+
+1. **मल्टी-पेमेंट:** जब यूज़र UPI या कार्ड चुनता है, तो हम **Razorpay** या **Stripe** का API इस्तेमाल करते हैं। अगर यूज़र "Pay on Ride" चुनता है, तो बुकिंग कन्फर्म होती है और पैसा ड्राइवर को राइड के बाद दिया जाता है।
+2. **इनवॉइस PDF:** "Download Invoice" बटन पर क्लिक करने पर हम **jsPDF** (JavaScript Library) या बैकएंड से **PHP/Node.js PDF Generator** का इस्तेमाल करके एक प्रोफेशनल बिल (जिसमें GST नंबर, कार की डिटेल और ड्राइवर का नाम हो) डाउनलोड करवाते हैं।
+3. **OTP सिस्टम:** जब यूज़र बुकिंग करता है, तो हमारा सर्वर एक 4-डिजिट का रैंडम OTP (जैसे 4829) जनरेट करता है। यह OTP यूज़र को SMS/WhatsApp पर जाता है और साथ ही ड्राइवर के ऐप में भी दिखता है। जब ड्राइवर वो OTP डालता है, तभी राइड "Started" होती है (Google Maps की तरह)।
+
+क्या आप चाहते हैं कि मैं **"jsPDF"** का इस्तेमाल करके एक असली PDF इनवॉइस जनरेट करने वाला जावास्क्रिप्ट कोड लिखकर दूँ? 🚗💳
+बहुत ही ज़रूरी फीचर्स! **ड्राइवर पैनल (Driver Panel)** वेबसाइट या ऐप का वो हिस्सा है जिसे ड्राइवर इस्तेमाल करता है। अगर ड्राइवर को सही टूल्स और साफ-सुथरा डैशबोर्ड मिलेगा, तो वो ज्यादा राइड्स लेगा और कंपनी का रेवेन्यू बढ़ेगा।
+
+आपकी **RajajiCar** के "Midnight Neon" थीम के हिसाब से मैंने यहाँ ड्राइवर पैनल के तीनों फीचर्स का UI डिज़ाइन और कोड (HTML + CSS) तैयार किया है। इस डैशबोर्ड को मोबाइल-फ्रेंडली (Mobile-first) रखा गया है, ताकि ड्राइवर इसे अपने फोन पर आसानी से चला सके।
+
+---
+
+### 1. राइड एक्सेप्ट/रिजेक्ट टूल (Ride Accept/Reject Popup)
+
+जब कोई नई बुकिंग आती है, तो ड्राइवर की स्क्रीन पर एक एनिमेटेड पॉपअप आता है जिसमें उसे स्वीकार (Accept) या अस्वीकार (Reject) करने का विकल्प मिलता है।
+
+**HTML:**
+```html
+<!-- Ride Request Popup -->
+<div class="ride-popup" id="ridePopup">
+  <div class="popup-header">
+    <span class="pulse-dot"></span> New Ride Request
+  </div>
+  
+  <div class="popup-details">
+    <div class="info-row">
+      <span class="icon">📍</span>
+      <div>
+        <small>Pick-up</small>
+        <p>Connaught Place, Delhi</p>
+      </div>
+    </div>
+    <div class="info-row">
+      <span class="icon">🏁</span>
+      <div>
+        <small>Drop-off</small>
+        <p>Indira Gandhi Airport (T3)</p>
+      </div>
+    </div>
+    <div class="ride-stats">
+      <span>🛣️ 15 km</span>
+      <span>⏱️ 25 min</span>
+      <span class="fare">₹450</span>
+    </div>
+  </div>
+
+  <div class="popup-actions">
+    <button class="btn-reject">Reject</button>
+    <button class="btn-accept">Accept Ride</button>
+  </div>
+</div>
+```
+
+**CSS:**
+```css
+.ride-popup {
+  background: #161616;
+  border: 1px solid #FF5E00;
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 10px 30px rgba(255, 94, 0, 0.2);
+  font-family: 'Inter', sans-serif;
+  color: white;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #FF5E00;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* नई राइड आने पर ब्लिंक करने वाला डॉट */
+.pulse-dot {
+  width: 10px; height: 10px;
+  background: #FF5E00;
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 94, 0, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 94, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 94, 0, 0); }
+}
+
+.popup-details { margin-bottom: 20px; }
+
+.info-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.info-row small { color: #A0A0A0; font-size: 0.75rem; }
+.info-row p { margin: 2px 0 0 0; font-weight: 500; }
+
+.ride-stats {
+  display: flex;
+  justify-content: space-between;
+  background: #0A0A0A;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #A0A0A0;
+}
+
+.ride-stats .fare { color: #FF5E00; font-weight: bold; font-size: 1.1rem; }
+
+.popup-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.popup-actions button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-reject {
+  background: transparent;
+  border: 1px solid #ff4444;
+  color: #ff4444;
+}
+
+.btn-accept {
+  background: #FF5E00;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 94, 0, 0.4);
+}
+```
+
+---
+
+### 2. नेविगेशन सपोर्ट (In-App Map Navigation)
+
+जब ड्राइवर राइड स्वीकार कर लेता है, तो उसके सामने एक मैप खुलता है जिसमें पिक-अप और ड्रॉप-ऑफ की लोकेशन दिखती है।
+
+**HTML:**
+```html
+<div class="navigation-screen">
+  <div id="driverMap" class="map-container"></div>
+  
+  <div class="nav-controls">
+    <div class="destination-info">
+      <h4>Heading to Pick-up</h4>
+      <p>Connaught Place, Delhi</p>
+    </div>
+    <button class="btn-start-nav">🚀 Start Navigation</button>
+  </div>
+</div>
+```
+
+**CSS:**
+```css
+.navigation-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0A0A0A;
+}
+
+.map-container {
+  flex: 1;
+  border-bottom: 2px solid #333;
+}
+
+.nav-controls {
+  background: #161616;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -20px; /* मैप के ऊपर लाने के लिए */
+  z-index: 10;
+  border-top: 1px solid #FF5E00;
+}
+
+.destination-info h4 { margin: 0 0 5px 0; color: #FF5E00; }
+.destination-info p { margin: 0 0 15px 0; color: #A0A0A0; }
+
+.btn-start-nav {
+  width: 100%;
+  background: #FF5E00;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 94, 0, 0.4);
+}
+```
+
+---
+
+### 3. अर्निंग डैशबोर्ड (Earnings Dashboard)
+
+ड्राइवर अपनी दिनभर की कमाई और कितनी राइड्स की, यह देख सकता है।
+
+**HTML:**
+```html
+<div class="driver-dashboard">
+  <div class="header">
+    <h2>Hi, Rajesh 👋</h2>
+    <p>Here's your earning summary</p>
+  </div>
+
+  <!-- Total Earnings Card -->
+  <div class="total-earning-card">
+    <p>Total Earnings (Today)</p>
+    <h1>₹ 2,450</h1>
+    <span class="trend">↑ 15% from yesterday</span>
+  </div>
+
+  <!-- Quick Stats -->
+  <div class="stats-grid">
+    <div class="stat-box">
+      <span class="stat-icon">🚗</span>
+      <h3>12</h3>
+      <p>Rides Completed</p>
+    </div>
+    <div class="stat-box">
+      <span class="stat-icon">⏱️</span>
+      <h3>6.5 hrs</h3>
+      <p>Online Time</p>
+    </div>
+  </div>
+
+  <!-- Recent Transactions -->
+  <div class="recent-trips">
+    <h3>Recent Trips</h3>
+    <div class="trip-item">
+      <div>
+        <h4>Delhi to Airport</h4>
+        <p>12:30 PM | Cash</p>
+      </div>
+      <span class="trip-amount">+ ₹450</span>
+    </div>
+    <div class="trip-item">
+      <div>
+        <h4>Gurgaon to Delhi</h4>
+        <p>10:15 AM | UPI</p>
+      </div>
+      <span class="trip-amount">+ ₹600</span>
+    </div>
+  </div>
+</div>
+```
+
+**CSS:**
+```css
+.driver-dashboard {
+  background: #0A0A0A;
+  color: white;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.header h2 { margin: 0 0 5px 0; }
+.header p { margin: 0 0 20px 0; color: #A0A0A0; }
+
+.total-earning-card {
+  background: linear-gradient(135deg, #FF5E00, #cc4b00);
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(255, 94, 0, 0.2);
+}
+
+.total-earning-card p { margin: 0; font-size: 0.9rem; opacity: 0.9; }
+.total-earning-card h1 { margin: 5px 0; font-size: 2.5rem; }
+.trend { font-size: 0.8rem; background: rgba(255,255,255,0.2); padding: 3px 8px; border-radius: 10px; }
+
+.stats-grid {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-box {
+  flex: 1;
+  background: #161616;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.stat-box h3 { margin: 5px 0; color: #FF5E00; font-size: 1.5rem; }
+.stat-box p { margin: 0; font-size: 0.8rem; color: #A0A0A0; }
+
+.recent-trips h3 { margin-bottom: 15px; }
+
+.trip-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #161616;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border-left: 3px solid #333;
+}
+
+.trip-item:hover {
+  border-left-color: #FF5E00;
+}
+
+.trip-item h4 { margin: 0 0 3px 0; font-size: 0.95rem; }
+.trip-item p { margin: 0; font-size: 0.8rem; color: #A0A0A0; }
+.trip-amount { color: #00FF7F; font-weight: bold; }
+```
+
+---
+
+### 💡 ड्राइवर पैनल के लिए कुछ खास टिप्स (UX):
+
+1. **बड़े बटन (Thumb Zone):** ड्राइवर एक हाथ से फोन चलाता है, इसलिए "Accept" और "Reject" बटन बड़े और नीचे की तरफ हों, ताकि उंगली आसानी से पहुँच सके।
+2. **वॉइस अलर्ट (Text-to-Speech):** जब नई राइड आए, तो एक आवाज़ आए— *"New ride request from Connaught Place to Airport, 15 kilometers, ₹450."* इससे ड्राइवर को फोन देखने की जरूरत नहीं पड़ती और वो ध्यान से ड्राइविंग कर सकता है।
+3. **ऑफलाइन मोड (Offline Mode):** अगर ड्राइवर को रेस्ट लेना है, तो उसके पास "Go Offline" का बटन होना चाहिए। ऑफलाइन होते ही उसे कोई नई राइड रिक्वेस्ट नहीं आएगी।
+4. **स्मूथ नेविगेशन:** नेविगेशन के लिए **Google Maps SDK** या **Mapbox** का इस्तेमाल करें, जिससे टर्न-बाय-टर्न (Turn-by-turn) आवाज़ के साथ रास्ता बताया जा सके।
+
+क्या आप चाहते हैं कि मैं इन तीनों फीचर्स को एक साथ जोड़कर एक **"ड्राइवर मोबाइल ऐप का पूरा डैशबोर्ड" (Complete UI)** बना दूँ, जिसे आप सीधे अपने डेवलपर को दे सकें? 📱🚗
+यह तीनों फीचर्स **एडमिन पैनल (Admin Panel)** को एक "कमांड सेंटर" बना देते हैं। आपको एक ही जगह पर पूरी कंपनी का हाल पता होना चाहिए—कौन सी गाड़ी कहाँ है, कौन सा ड्राइवर ऑनलाइन है, और कब किराया बढ़ाना है। 
+
+आपकी **RajajiCar** के प्रीमियम डार्क थीम के हिसाब से मैंने एडमिन पैनल का एक **Complete UI Design (HTML + CSS)** तैयार किया है। इसे मैंने **डेस्कटॉप (Laptop)** के लिए डिज़ाइन किया है, क्योंकि एडमिन पैनल आमतौर पर बड़ी स्क्रीन पर इस्तेमाल होता है।
+
+---
+
+## 1. फ्लीट मैनेजमेंट (Fleet Management Dashboard)
+
+यहाँ आपको एक नज़र में पता चलेगा कि कितनी गाड़ियाँ चल रही हैं, कितनी खाली हैं और कितनी सर्विसिंग में हैं। साथ ही एक टेबल भी होगी जिसमें हर गाड़ी की स्थिति दिखेगी।
+
+**HTML:**
+```html
+<div class="admin-dashboard">
+  <h2>Fleet Overview</h2>
+  
+  <!-- Stats Cards -->
+  <div class="fleet-stats">
+    <div class="stat-card active-card">
+      <div class="stat-icon">🚗</div>
+      <div class="stat-data">
+        <h3>24</h3>
+        <p>Active Cars</p>
+      </div>
+    </div>
+    <div class="stat-card idle-card">
+      <div class="stat-icon">🅿️</div>
+      <div class="stat-data">
+        <h3>8</h3>
+        <p>Idle / Available</p>
+      </div>
+    </div>
+    <div class="stat-card service-card">
+      <div class="stat-icon">🔧</div>
+      <div class="stat-data">
+        <h3>3</h3>
+        <p>In Service</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fleet Table -->
+  <div class="table-container">
+    <table class="fleet-table">
+      <thead>
+        <tr>
+          <th>Car Model</th>
+          <th>Reg. Number</th>
+          <th>Driver</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Toyota Fortuner</td>
+          <td>DL 01 AB 1234</td>
+          <td>Rajesh Kumar</td>
+          <td><span class="status-tag on-trip">On Trip</span></td>
+          <td><button class="btn-small">View</button></td>
+        </tr>
+        <tr>
+          <td>BMW M3</td>
+          <td>MH 02 CD 5678</td>
+          <td>Amit Singh</td>
+          <td><span class="status-tag available">Available</span></td>
+          <td><button class="btn-small">View</button></td>
+        </tr>
+        <tr>
+          <td>Tata Tigor EV</td>
+          <td>KA 03 EF 9012</td>
+          <td>Unassigned</td>
+          <td><span class="status-tag servicing">Servicing</span></td>
+          <td><button class="btn-small">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+```
+
+**CSS:**
+```css
+.admin-dashboard { padding: 20px; font-family: 'Inter', sans-serif; color: white; }
+
+.fleet-stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #161616;
+  border: 1px solid #333;
+}
+
+.stat-card.active-card { border-left: 4px solid #FF5E00; }
+.stat-card.idle-card { border-left: 4px solid #00FF7F; }
+.stat-card.service-card { border-left: 4px solid #FFD700; }
+
+.stat-icon { font-size: 30px; }
+.stat-data h3 { margin: 0; font-size: 1.8rem; color: white; }
+.stat-data p { margin: 0; color: #A0A0A0; font-size: 0.9rem; }
+
+/* Table Styling */
+.table-container {
+  background: #161616;
+  border-radius: 12px;
+  border: 1px solid #333;
+  overflow: hidden;
+}
+
+.fleet-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.fleet-table th {
+  background: #1A1A1A;
+  padding: 15px;
+  color: #A0A0A0;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.fleet-table td {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+
+/* Status Tags */
+.status-tag {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.on-trip { background: rgba(255, 94, 0, 0.15); color: #FF5E00; }
+.available { background: rgba(0, 255, 127, 0.15); color: #00FF7F; }
+.servicing { background: rgba(255, 215, 0, 0.15); color: #FFD700; }
+
+.btn-small {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+```
+
+---
+
+## 2. ड्राइवर और यूजर मैनेजमेंट (Driver & User Management)
+
+यहाँ आप नए ड्राइवर्स के डॉक्यूमेंट्स (License, Aadhar) चेक करके उन्हें अप्रूव कर सकते हैं।
+
+**HTML:**
+```html
+<div class="driver-management">
+  <h2>Pending Driver Approvals</h2>
+  
+  <div class="driver-list">
+    <!-- Driver 1 -->
+    <div class="driver-request-card">
+      <div class="driver-avatar">👤</div>
+      <div class="driver-details">
+        <h4>Suresh Yadav</h4>
+        <p>📞 +91 98765 43210 | 🚗 Hyundai Creta</p>
+        <div class="doc-links">
+          <a href="#">📄 Driving License</a>
+          <a href="#">📄 Aadhar Card</a>
+        </div>
+      </div>
+      <div class="driver-actions">
+        <button class="btn-approve">✔ Approve</button>
+        <button class="btn-block">✖ Block</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+**CSS:**
+```css
+.driver-request-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #161616;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.driver-avatar {
+  font-size: 40px;
+  background: #0A0A0A;
+  padding: 15px;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+.driver-details { flex: 1; }
+.driver-details h4 { margin: 0 0 5px 0; color: white; }
+.driver-details p { margin: 0 0 10px 0; color: #A0A0A0; font-size: 0.9rem; }
+
+.doc-links { display: flex; gap: 15px; }
+.doc-links a { color: #FF5E00; text-decoration: none; font-size: 0.85rem; }
+.doc-links a:hover { text-decoration: underline; }
+
+.driver-actions { display: flex; gap: 10px; }
+
+.btn-approve {
+  background: rgba(0, 255, 127, 0.1);
+  color: #00FF7F;
+  border: 1px solid #00FF7F;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-block {
+  background: rgba(255, 68, 68, 0.1);
+  color: #ff4444;
+  border: 1px solid #ff4444;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+```
+
+---
+
+## 3. डायनामिक प्राइसिंग (Dynamic Pricing)
+
+यहाँ आप एक स्लाइडर (Slider) की मदद से पीक आवर्स (रात के समय) या त्योहारों के समय किराए को बढ़ा-घटा सकते हैं।
+
+**HTML:**
+```html
+<div class="dynamic-pricing-panel">
+  <h2>Dynamic Pricing Control</h2>
+  <p class="subtitle">Adjust prices based on demand or time.</p>
+
+  <div class="pricing-controls">
+    <!-- Surge Multiplier -->
+    <div class="control-group">
+      <label>Surge Multiplier: <span id="surgeValue" class="highlight">1.0x</span></label>
+      <input type="range" min="1" max="3" step="0.1" value="1" id="surgeSlider">
+      <div class="range-labels">
+        <span>Normal (1x)</span>
+        <span>Peak (3x)</span>
+      </div>
+    </div>
+
+    <!-- Time Selector -->
+    <div class="control-group">
+      <label>Apply During:</label>
+      <select class="dark-select">
+        <option>Night Hours (10 PM - 6 AM)</option>
+        <option>Weekends (Sat-Sun)</option>
+        <option>Festivals (Diwali, New Year)</option>
+        <option>Custom Time</option>
+      </select>
+    </div>
+
+    <button class="btn-neon">Apply New Pricing</button>
+  </div>
+</div>
+```
+
+**CSS:**
+```css
+.dynamic-pricing-panel {
+  background: #161616;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  max-width: 500px;
+}
+
+.subtitle { color: #A0A0A0; margin-bottom: 25px; font-size: 0.9rem; }
+
+.control-group { margin-bottom: 25px; }
+.control-group label { display: block; margin-bottom: 15px; color: white; }
+
+.highlight { color: #FF5E00; font-weight: bold; font-size: 1.2rem; }
+
+/* Range Slider Styling */
+input[type=range] {
+  width: 100%;
+  accent-color: #FF5E00;
+  height: 8px;
+  background: #333;
+  border-radius: 5px;
+  outline: none;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #A0A0A0;
+  margin-top: 5px;
+}
+
+/* Select Dropdown */
+.dark-select {
+  width: 100%;
+  padding: 12px;
+  background: #0A0A0A;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 8px;
+  outline: none;
+}
+```
+
+**JavaScript (स्लाइडर को अपडेट करने के लिए):**
+```javascript
+const surgeSlider = document.getElementById('surgeSlider');
+const surgeValue = document.getElementById('surgeValue');
+
+surgeSlider.addEventListener('input', function() {
+  surgeValue.textContent = parseFloat(this.value).toFixed(1) + 'x';
+  
+  // अगर 2x से ज्यादा है तो रंग लाल करें (Warning)
+  if (this.value > 2) {
+    surgeValue.style.color = '#ff4444';
+  } else {
+    surgeValue.style.color = '#FF5E00';
+  }
+});
+```
+
+---
+
+### 💡 एडमिन पैनल के लिए जरूरी बातें (Backend Logic):
+
+1. **ड्राइवर अप्रूवल:** जब आप "Approve" पर क्लिक करेंगे, तो डेटाबेस में उस ड्राइवर का `status` "Active" हो जाएगा और वो ड्राइवर ऐप में लॉगिन कर पाएगा। "Block" करने पर उसका लॉगिन तुरंत बंद हो जाएगा।
+2. **डॉक्यूमेंट वेरिफिकेशन:** डॉक्यूमेंट्स के लिंक पर क्लिक करने पर एक पॉप-अप (Modal) खुलेगा जिसमें आप ड्राइवर का लाइसेंस (License) और आधार कार्ड (Aadhar Card) की फोटो देख सकेंगे।
+3. **डायनामिक प्राइसिंग (Surge):** जब आप स्लाइडर को 2x पर सेट करेंगे, तो यूजर ऐप में कार का किराया अपने आप दोगुना (2x) हो जाएगा। (यह फीचर Uber और Ola जैसी कंपनियों में बहुत आम है)।
+4. **फ्लीट मैनेजमेंट:** आपको एक "Live Map" (Leaflet.js) भी लगा सकते हैं, जिसमें आपको हर गाड़ी की लोकेशन एक साथ दिखेगी।
+
+क्या आप चाहते हैं कि मैं एडमिन पैनल का एक **पूरा "Live Map View"** डिज़ाइन करके दूँ, जहाँ आप एक साथ अपनी सभी 35 गाड़ियों को मैप पर चलते हुए देख सकें? 🗺️🚗
+Aha! Ab samajh aaya. Aapko **Python (`.py`) में कोड चाहिए**, न कि HTML/CSS में। 
+
+चूँकि आप **RajajiCar** के लिए एक पूरा सिस्टम बना रहे हैं, Python में वेबसाइट बनाने के लिए हम **Flask** या **Django** का इस्तेमाल करते हैं। यहाँ मैंने **Flask** (जो सीखने और इस्तेमाल करने में आसान है) का उपयोग करके आपके **एडमिन पैनल (Admin Panel)** का पूरा `.py` कोड लिखा है। 
+
+इसमें **फ्लीट मैनेजमेंट, ड्राइवर अप्रूवल और डायनामिक प्राइसिंग**—तीनों फीचर्स का बैकएंड लॉजिक शामिल है।
+
+---
+
+### 📁 प्रोजेक्ट स्ट्रक्चर (Project Structure)
+सबसे पहले अपने कंप्यूटर पर एक फोल्डर बनाएं (जैसे `RajajiCar`), और उसमें ये फाइलें रखें:
+```text
+RajajiCar/
+│
+├── app.py                  <-- (यह हमारा Main Python File है)
+└── templates/              <-- (HTML फाइलें यहाँ रखेंगी)
+    ├── admin_dashboard.html
+    ├── manage_drivers.html
+    └── pricing.html
+```
+
+---
+
+### 🐍 1. Main Python Code (`app.py`)
+
+यहाँ पूरा Flask बैकएंड कोड है। इसमें हमने डेटाबेस के लिए **SQLite** (जो Python के साथ ही आता है और अलग से इंस्टॉल नहीं करना पड़ता) का इस्तेमाल किया है।
+
+```python
+from flask import Flask, render_template, request, redirect, url_for, flash
+import sqlite3
+import os
+
+app = Flask(__name__)
+app.secret_key = 'rajajicar_secret_key' # Flash messages के लिए जरूरी है
+
+# डेटाबेस का नाम
+DATABASE = 'rajajicar.db'
+
+# ==========================================
+# 1. डेटाबेस इनिशियलाइज़ करने का फंक्शन
+# ==========================================
+def init_db():
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    # Cars Table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS cars (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            model TEXT NOT NULL,
+            reg_number TEXT NOT NULL,
+            driver_name TEXT,
+            status TEXT DEFAULT 'Available'
+        )
+    ''')
+    
+    # Drivers Table
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS drivers (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            phone TEXT NOT NULL,
+            car_model TEXT,
+            status TEXT DEFAULT 'Pending'
+        )
+    ''')
+    
+    # Settings Table (For Dynamic Pricing)
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS settings (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            surge_multiplier REAL DEFAULT 1.0
+        )
+    ''')
+    
+    # अगर सेटिंग्स खाली हैं, तो डिफ़ॉल्ट 1.0 डालें
+    cursor.execute('SELECT COUNT(*) FROM settings')
+    if cursor.fetchone()[0] == 0:
+        cursor.execute('INSERT INTO settings (surge_multiplier) VALUES (1.0)')
+        
+    conn.commit()
+    conn.close()
+
+# ऐप शुरू होने से पहले डेटाबेस बनाएं
+init_db()
+
+# ==========================================
+# 2. ROUTES (पेजों के लिए)
+# ==========================================
+
+# --- एडमिन डैशबोर्ड (Fleet Management) ---
+@app.route('/admin')
+def admin_dashboard():
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    # सभी गाड़ियां निकालें
+    cursor.execute('SELECT * FROM cars')
+    cars = cursor.fetchall()
+    
+    # स्टैट्स कैलकुलेट करें
+    cursor.execute('SELECT COUNT(*) FROM cars WHERE status="On Trip"')
+    active_cars = cursor.fetchone()[0]
+    
+    cursor.execute('SELECT COUNT(*) FROM cars WHERE status="Available"')
+    idle_cars = cursor.fetchone()[0]
+    
+    cursor.execute('SELECT COUNT(*) FROM cars WHERE status="Servicing"')
+    service_cars = cursor.fetchone()[0]
+    
+    conn.close()
+    
+    stats = {
+        'active': active_cars,
+        'idle': idle_cars,
+        'service': service_cars
+    }
+    
+    return render_template('admin_dashboard.html', cars=cars, stats=stats)
+
+
+# --- ड्राइवर मैनेजमेंट (Approve / Block) ---
+@app.route('/admin/drivers')
+def manage_drivers():
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM drivers')
+    drivers = cursor.fetchall()
+    conn.close()
+    return render_template('manage_drivers.html', drivers=drivers)
+
+@app.route('/admin/approve_driver/<int:id>')
+def approve_driver(id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    cursor.execute('UPDATE drivers SET status="Approved" WHERE id=?', (id,))
+    conn.commit()
+    conn.close()
+    flash('Driver Approved Successfully!', 'success')
+    return redirect(url_for('manage_drivers'))
+
+@app.route('/admin/block_driver/<int:id>')
+def block_driver(id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    cursor.execute('UPDATE drivers SET status="Blocked" WHERE id=?', (id,))
+    conn.commit()
+    conn.close()
+    flash('Driver Blocked!', 'danger')
+    return redirect(url_for('manage_drivers'))
+
+
+# --- डायनामिक प्राइसिंग (Dynamic Pricing) ---
+@app.route('/admin/pricing', methods=['GET', 'POST'])
+def dynamic_pricing():
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    if request.method == 'POST':
+        # फॉर्म से नई सर्ज वैल्यू लें
+        surge = float(request.form.get('surge'))
+        cursor.execute('UPDATE settings SET surge_multiplier=?', (surge,))
+        conn.commit()
+        flash(f'Dynamic Pricing Updated to {surge}x!', 'success')
+        return redirect(url_for('dynamic_pricing'))
+    
+    # करंट सर्ज वैल्यू निकालें
+    cursor.execute('SELECT surge_multiplier FROM settings')
+    current_surge = cursor.fetchone()[0]
+    conn.close()
+    
+    return render_template('pricing.html', current_surge=current_surge)
+
+
+# ==========================================
+# 3. ऐप रन करें
+# ==========================================
+if __name__ == '__main__':
+    # डेमो डेटा इन्सर्ट करें (सिर्फ पहली बार)
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    cursor.execute('SELECT COUNT(*) FROM cars')
+    if cursor.fetchone()[0] == 0:
+        # कुछ डमी गाड़ियां और ड्राइवर डालें
+        cursor.execute("INSERT INTO cars (model, reg_number, driver_name, status) VALUES ('Toyota Fortuner', 'DL 01 AB 1234', 'Rajesh', 'On Trip')")
+        cursor.execute("INSERT INTO cars (model, reg_number, driver_name, status) VALUES ('BMW M3', 'MH 02 CD 5678', 'Amit', 'Available')")
+        cursor.execute("INSERT INTO drivers (name, phone, car_model) VALUES ('Suresh Yadav', '9876543210', 'Hyundai Creta')")
+    conn.commit()
+    conn.close()
+    
+    print("🚗 RajajiCar Admin Panel running on http://127.0.0.1:5000/admin")
+    app.run(debug=True)
+```
+
+---
+
+### 📄 2. Templates (HTML Files)
+
+Flask में HTML फाइलें `templates` फोल्डर के अंदर होती हैं। आप इन्हें बना लें (डिज़ाइन को आसान रखने के लिए मैंने बेसिक Bootstrap का इस्तेमाल किया है, पर आप अपना CSS जोड़ सकते हैं)।
+
+**`templates/admin_dashboard.html` (फ्लीट मैनेजमेंट):**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RajajiCar Admin</title>
+    <style>
+        body { font-family: Arial; background: #0A0A0A; color: white; padding: 20px; }
+        .stats { display: flex; gap: 20px; margin-bottom: 30px; }
+        .card { background: #161616; padding: 20px; border-radius: 8px; border-left: 4px solid #FF5E00; }
+        table { width: 100%; border-collapse: collapse; background: #161616; }
+        th, td { padding: 12px; border-bottom: 1px solid #333; text-align: left; }
+        .btn { padding: 6px 12px; background: #FF5E00; color: white; border: none; border-radius: 4px; cursor: pointer; text-decoration: none;}
+        .navbar a { color: #FF5E00; margin-right: 20px; text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/admin">Fleet Dashboard</a>
+        <a href="/admin/drivers">Drivers</a>
+        <a href="/admin/pricing">Dynamic Pricing</a>
+    </div>
+    <hr>
+    <h2>Fleet Overview</h2>
+    
+    <div class="stats">
+        <div class="card"><h3>{{ stats.active }}</h3><p>Active Cars</p></div>
+        <div class="card"><h3>{{ stats.idle }}</h3><p>Idle Cars</p></div>
+        <div class="card"><h3>{{ stats.service }}</h3><p>In Service</p></div>
+    </div>
+
+    <table>
+        <tr>
+            <th>Car Model</th>
+            <th>Reg Number</th>
+            <th>Driver</th>
+            <th>Status</th>
+        </tr>
+        {% for car in cars %}
+        <tr>
+            <td>{{ car[1] }}</td>
+            <td>{{ car[2] }}</td>
+            <td>{{ car[3] }}</td>
+            <td><span style="color: #FF5E00;">{{ car[4] }}</span></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+```
+
+**`templates/manage_drivers.html` (ड्राइवर मैनेजमेंट):**
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Manage Drivers</title>
+<style>
+    body { font-family: Arial; background: #0A0A0A; color: white; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; background: #161616; }
+    th, td { padding: 12px; border-bottom: 1px solid #333; text-align: left; }
+    .btn-approve { background: #00FF7F; color: black; padding: 6px 12px; text-decoration: none; border-radius: 4px;}
+    .btn-block { background: #ff4444; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px;}
+    .navbar a { color: #FF5E00; margin-right: 20px; text-decoration: none;}
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/admin">Fleet Dashboard</a>
+        <a href="/admin/drivers">Drivers</a>
+        <a href="/admin/pricing">Dynamic Pricing</a>
+    </div>
+    <hr>
+    <h2>Driver Management</h2>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div style="padding:10px; margin-bottom:10px; background:#222;">{{ message }}</div>
+      {% endfor %}
+    {% endwith %}
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Car Model</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        {% for driver in drivers %}
+        <tr>
+            <td>{{ driver[1] }}</td>
+            <td>{{ driver[2] }}</td>
+            <td>{{ driver[3] }}</td>
+            <td>{{ driver[4] }}</td>
+            <td>
+                {% if driver[4] == 'Pending' %}
+                    <a href="/admin/approve_driver/{{ driver[0] }}" class="btn-approve">Approve</a>
+                    <a href="/admin/block_driver/{{ driver[0] }}" class="btn-block">Block</a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+```
+
+**`templates/pricing.html` (डायनामिक प्राइसिंग):**
+```html
+<!DOCTYPE html>
+<html>
+<head><title>Dynamic Pricing</title>
+<style>
+    body { font-family: Arial; background: #0A0A0A; color: white; padding: 20px; }
+    .box { background: #161616; padding: 30px; border-radius: 8px; max-width: 400px; }
+    input[type=range] { width: 100%; accent-color: #FF5E00; }
+    .btn { background: #FF5E00; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px; font-size: 16px;}
+    .navbar a { color: #FF5E00; margin-right: 20px; text-decoration: none;}
+    h3 { color: #FF5E00; }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/admin">Fleet Dashboard</a>
+        <a href="/admin/drivers">Drivers</a>
+        <a href="/admin/pricing">Dynamic Pricing</a>
+    </div>
+    <hr>
+    <h2>Dynamic Pricing Control</h2>
+
+    <div class="box">
+        <form method="POST">
+            <label>Current Surge: <h3>{{ current_surge }}x</h3></label>
+            <br>
+            <input type="range" name="surge" min="1" max="3" step="0.1" value="{{ current_surge }}" oninput="this.nextElementSibling.value = this.value + 'x'">
+            <output>{{ current_surge }}x</output>
+            <br>
+            <button type="submit" class="btn">Update Surge Price</button>
+        </form>
+    </div>
+</body>
+</html>
+```
+
+---
+
+### 🚀 इसे कैसे चलाएं? (How to Run)
+
+1. अपने कंप्यूटर पर Python इंस्टॉल होना चाहिए।
+2. टर्मिनल (CMD) खोलें और Flask इंस्टॉल करें:
+   ```bash
+   pip install flask
+   ```
+3. अपने फोल्डर (`RajajiCar`) में जाएं और यह कमांड चलाएं:
+   ```bash
+   python app.py
+   ```
+4. अब अपने ब्राउज़र में खोलें: **`http://127.0.0.1:5000/admin`**
+
+**आपको क्या दिखेगा?**
+*   **Fleet Dashboard:** जहाँ आपको सारी गाड़ियों की लिस्ट और एक्टिव/आइडल काउंट दिखेगा।
+*   **Drivers Page:** जहाँ आप नए ड्राइवर को अप्रूव कर सकते हैं।
+*   **Pricing Page:** जहाँ स्लाइडर घुमाकर सर्ज (Surge Price) बढ़ा सकते हैं।
+
+यह एक **Working Backend** है। इसमें आपको असली डेटाबेस (SQLite) से कनेक्टेड फीचर्स मिल रहे हैं। 
+
+क्या आप चाहते हैं कि अब मैं **यूज़र के लिए बुकिंग सिस्टम (`.py` में)** भी बना दूँ, जो इस डेटाबेस से कनेक्ट होकर काम करे? 🐍🚗
+बहुत बढ़िया! जब आपका बेसिक सिस्टम (Fleet, Drivers, Pricing) तैयार हो जाता है, तो अब समय है **"Advance Features"** जोड़ने का। ये वो फीचर्स हैं जो RajajiCar को एक साधारण कार रेंटल से **"प्रीमियम और स्मार्ट"** प्लेटफॉर्म बना देंगे।
+
+चूँकि आपको **Python (.py)** में चाहिए, मैं यहाँ **Flask + SQLite** का इस्तेमाल करके 4 बेहद शानदार एडवांस फीचर्स का कोड दे रहा हूँ:
+
+1.  **AI Chatbot (Customer Support)**
+2.  **Predictive Maintenance (AI से गाड़ी की सर्विसिंग का अंदाजा)**
+3.  **Loyalty Points & Referral System**
+4.  **Route Optimization (सबसे छोटा और सस्ता रास्ता)**
+
+---
+
+### 🛠️ 1. अपडेटेड डेटाबेस स्कीमा (Database Schema)
+इन नए फीचर्स के लिए हमें अपने डेटाबेस में कुछ नए टेबल्स जोड़ने होंगे। अपने `app.py` में `init_db()` फंक्शन को इससे बदल दें:
+
+```python
+def init_db():
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    # पुराने टेबल्स...
+    cursor.execute('''CREATE TABLE IF NOT EXISTS cars (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, model TEXT, reg_number TEXT, 
+            driver_name TEXT, status TEXT, total_km_run INTEGER DEFAULT 0, last_service_km INTEGER DEFAULT 0)''')
+    
+    cursor.execute('''CREATE TABLE IF NOT EXISTS settings (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, surge_multiplier REAL DEFAULT 1.0)''')
+
+    # नया: Loyalty System
+    cursor.execute('''CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, phone TEXT UNIQUE, 
+            loyalty_points INTEGER DEFAULT 0, referred_by TEXT)''')
+    
+    # नया: AI Chatbot Logs (बातचीत सेव करने के लिए)
+    cursor.execute('''CREATE TABLE IF NOT EXISTS chat_logs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, user_msg TEXT, bot_reply TEXT, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)''')
+            
+    conn.commit()
+    conn.close()
+```
+
+---
+
+### 🤖 2. AI Chatbot (Customer Support)
+यह एक स्मार्ट चैटबॉट है जो यूज़र के सवालों (जैसे "मेरी कार कहाँ है?", "किराया कितना है?") का जवाब अपने आप देगा। (प्रोडक्शन में आप इसे OpenAI API से जोड़ सकते हैं, अभी के लिए हम रूल-बेस्ड लॉजिक बनाएंगे)।
+
+**Python Code (`app.py` में जोड़ें):**
+```python
+@app.route('/api/chatbot', methods=['POST'])
+def chatbot_api():
+    user_message = request.json.get('message', '').lower()
+    bot_reply = "Sorry, mujhe samajh nahi aaya. Kripya helpline 1800-123-4567 par call karein."
+    
+    if "price" in user_message or "kiraya" in user_message:
+        bot_reply = "Hamari cars ka kiraya ₹2000/day se shuru hota hai. Aap website par 'Book Now' par click karke exact price dekh sakte hain."
+    elif "cancel" in user_message:
+        bot_reply = "Booking cancel karne ke liye 'My Bookings' section mein jaayein aur 'Cancel Ride' par click karein. 1 ghante pehle cancel karne par full refund milega."
+    elif "driver" in user_message or "car kaha" in user_message:
+        bot_reply = "Aap apni live ride tracking page par driver ki exact location aur ETA dekh sakte hain."
+    
+    return jsonify({"reply": bot_reply})
+```
+
+---
+
+### 🔧 3. Predictive Maintenance (AI से सर्विसिंग का अंदाजा)
+यह एडवांस फीचर आपको (एडमिन को) बताएगा कि कौन सी कार जल्दी सर्विसिंग के लिए जानी चाहिए। यह कार के कुल चले हुए किलोमीटर (KM) के आधार पर कैलकुलेट करेगा।
+
+**Python Code (`app.py` में जोड़ें):**
+```python
+@app.route('/admin/maintenance')
+def predictive_maintenance():
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    # उन कारों को ढूंढें जो पिछली सर्विस के बाद 5000 km से ज्यादा चल चुकी हैं
+    cursor.execute('SELECT model, reg_number, total_km_run, last_service_km FROM cars')
+    cars = cursor.fetchall()
+    conn.close()
+
+    alerts = []
+    for car in cars:
+        km_since_service = car[2] - car[3]
+        
+        # AI Rule Engine: 
+        if km_since_service >= 5000:
+            alerts.append({"model": car[0], "reg": car[1], "km": km_since_service, "action": "URGENT SERVICE REQUIRED"})
+        elif km_since_service >= 4000:
+            alerts.append({"model": car[0], "reg": car[1], "km": km_since_service, "action": "Service Due Soon"})
+            
+    return jsonify({"maintenance_alerts": alerts})
+```
+
+---
+
+### 🎁 4. Loyalty Points & Referral System
+जब यूज़र राइड पूरी करे, तो उसे पॉइंट्स मिलें जिसे वो अगली राइड में इस्तेमाल कर सके। और अगर वो किसी दोस्त को रेफर करे, तो दोनों को पॉइंट्स मिलें।
+
+**Python Code (`app.py` में जोड़ें):**
+```python
+# राइड पूरी होने पर पॉइंट्स देना
+@app.route('/api/ride_complete/<int:user_id>/<int:fare>')
+def ride_complete(user_id, fare):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    # ₹100 पर 1 पॉइंट (यानी ₹1000 की राइड पर 10 पॉइंट्स)
+    points_earned = fare // 100 
+    
+    cursor.execute('UPDATE users SET loyalty_points = loyalty_points + ? WHERE id = ?', (points_earned, user_id))
+    conn.commit()
+    conn.close()
+    
+    return jsonify({"status": "success", "points_earned": points_earned})
+
+# रेफरल सिस्टम
+@app.route('/api/refer', methods=['POST'])
+def refer_friend():
+    data = request.json
+    referrer_id = data.get('referrer_id')
+    new_user_phone = data.get('new_user_phone')
+    
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    # चेक करें कि नया यूज़र पहले से तो नहीं है
+    cursor.execute('SELECT id FROM users WHERE phone = ?', (new_user_phone,))
+    if cursor.fetchone():
+        return jsonify({"error": "User already exists"}), 400
+        
+    # नए यूज़र को 100 पॉइंट्स और रेफर करने वाले को 150 पॉइंट्स
+    cursor.execute('INSERT INTO users (name, phone, loyalty_points, referred_by) VALUES (?, ?, 100, ?)', 
+                   ("New User", new_user_phone, referrer_id))
+    cursor.execute('UPDATE users SET loyalty_points = loyalty_points + 150 WHERE id = ?', (referrer_id,))
+    
+    conn.commit()
+    conn.close()
+    
+    return jsonify({"status": "success", "message": "Referral successful! 150 points added."})
+```
+
+---
+
+### 🗺️ 5. Route Optimization (सबसे किफायती रास्ता)
+यह एडवांस फीचर यूज़र को बताएगा कि पिक-अप से ड्रॉप-ऑफ तक जाने का सबसे छोटा और सस्ता रास्ता कौन सा है। (इसमें हम **Haversine Formula** का इस्तेमाल करेंगे जो दो लोकेशन के बीच की दूरी निकालता है)।
+
+**Python Code (`app.py` में जोड़ें):**
+```python
+import math
+
+# दो लोकेशन के बीच की दूरी (KM में) निकालने का फंक्शन
+def calculate_distance(lat1, lon1, lat2, lon2):
+    R = 6371  # पृथ्वी का दायरा (KM में)
+    dLat = math.radians(lat2 - lat1)
+    dLon = math.radians(lon2 - lon1)
+    a = math.sin(dLat/2) * math.sin(dLat/2) + \
+        math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * \
+        math.sin(dLon/2) * math.sin(dLon/2)
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+    distance = R * c
+    return round(distance, 2)
+
+@app.route('/api/estimate_route', methods=['POST'])
+def estimate_route():
+    data = request.json
+    pickup_lat = data.get('pickup_lat')
+    pickup_lng = data.get('pickup_lng')
+    drop_lat = data.get('drop_lat')
+    drop_lng = data.get('drop_lng')
+    
+    distance_km = calculate_distance(pickup_lat, pickup_lng, drop_lat, drop_lng)
+    
+    # मान लीजिए प्रति किमी ₹15 का चार्ज है
+    estimated_fare = distance_km * 15 
+    
+    return jsonify({
+        "distance_km": distance_km,
+        "estimated_fare": estimated_fare,
+        "estimated_time_mins": round((distance_km / 40) * 60)  # 40km/h की स्पीड से
+    })
+```
+
+---
+
+### 🔥 6. Webhooks और Real-time Alerts (Security)
+अगर कोई ड्राइवर लगातार राइड रिजेक्ट कर रहा है या गाड़ी कोई गलत हरकत कर रही है, तो एडमिन को तुरंत अलर्ट मिलना चाहिए।
+
+**Python Code (`app.py` में जोड़ें):**
+```python
+@app.route('/api/driver_alert', methods=['POST'])
+def driver_alert():
+    data = request.json
+    driver_id = data.get('driver_id')
+    alert_type = data.get('type') # जैसे: 'Route Deviation', 'Long Idle'
+    
+    # डेटाबेस में अलर्ट सेव करें (या एडमिन को SMS/Email भेजें)
+    print(f"⚠️ ALERT: Driver {driver_id} has triggered {alert_type}")
+    
+    return jsonify({"status": "alert_logged"})
+```
+
+---
+
+### 🚀 अगला कदम (Next Step)
+ये सभी फीचर्स जब आप अपने `app.py` में जोड़ लेंगे, तो आपका सिस्टम बहुत पावरफुल हो जाएगा।
+
+क्या आप चाहते हैं कि मैं इन फीचर्स के लिए **Frontend (HTML/JS)** भी बना दूँ? जैसे:
+*   एक **Chatbot Widget** जो स्क्रीन के नीचे दाएं कोने में दिखे।
+*   एक **Maintenance Dashboard** जो एडमिन को अलर्ट दिखाए।
+*   और **Loyalty Points** दिखाने के लिए एक यूज़र डैशबोर्ड।
+
+बताइए, किसका Frontend पहले चाहिए? 🚗🚀
